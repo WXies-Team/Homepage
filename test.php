@@ -40,10 +40,17 @@
     .team-member {
       text-align: center;
       margin: 20px;
+      transition: transform 0.2s ease; /* 添加过渡效果 */
     }
     .team-member img {
       max-width: 100px;
-      border-radius: 50%;
+      border-radius: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    /* 放大效果 */
+    .team-member:hover {
+      transform: scale(1.1); /* 将头像放大1.1倍 */
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* 添加更明显的阴影效果 */
     }
   </style>
 </head>
@@ -77,45 +84,44 @@
           <p class="lead text-dark">欢迎来到唯蟹 Team，我们是一支热爱探索的团队。通过坚持不懈的努力，我们不断前进，迎接新的挑战。</p>
         </div>
         <div class="col-lg-6 col-md-10">
-<!-- Team Members - 每行显示三个成员 -->
-<div class="row">
-  <div class="col-md-12">
-    <div class="d-flex flex-wrap justify-content-center align-items-center">
-      <!-- Member 1 (Team Leader) -->
-      <div class="team-member mx-4">
-        <a href="https://horatio.cn"><img src="https://q1.qlogo.cn/g?b=qq&nk=1115058004&s=640" alt="Horatio" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);"></a>
-        <p style="color: black;"><a href="https://horatio.cn">Horatio</a><br>创始人</p>
-      </div>
-      <!-- Member 2 (Co-founder) -->
-      <div class="team-member mx-4">
-        <a href="https://blog.wj0.top"><img src="https://q1.qlogo.cn/g?b=qq&nk=1298800228&s=640" alt="Jack" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);"></a>
-        <p style="color: black;"><a href="https://blog.wj0.top">Jack</a><br>联合创始人</p>
-      </div>
-      <!-- Member 3 (Co-founder) -->
-      <div class="team-member mx-4">
-        <a href="https://horatio.cn"><img src="https://q1.qlogo.cn/g?b=qq&nk=3033831844&s=640" alt="Lujing" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);"></a>
-        <p style="color: black;">Lujing<br>联合创始人</p>
-      </div>
-      <!-- Member 4 -->
-      <div class="team-member mx-4">
-        <img src="https://q1.qlogo.cn/g?b=qq&nk=3206558616&s=640" alt="Horatio" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-        <p style="color: black;">Cheng</p>
-      </div>
-      <!-- Member 5 -->
-      <div class="team-member mx-4">
-        <img src="https://q1.qlogo.cn/g?b=qq&nk=2653382153&s=640" alt="Horatio" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-        <p style="color: black;">Cheri</p>
-      </div>
-      <!-- Member 6 -->
-      <div class="team-member mx-4">
-        <img src="https://q1.qlogo.cn/g?b=qq&nk=3211218425&s=640" alt="Horatio" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-        <p style="color: black;">wdw0</p>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Team Members End - 每行显示三个成员 -->
-
+          <!-- Team Members - 每行显示三个成员 -->
+          <div class="row">
+            <div class="col-md-12">
+              <div class="d-flex flex-wrap justify-content-center align-items-center">
+                <!-- Member 1 (Team Leader) -->
+                <div class="team-member mx-4">
+                  <a href="https://horatio.cn"><img src="https://q1.qlogo.cn/g?b=qq&nk=1115058004&s=640" alt="Horatio"></a>
+                  <p>Horatio<br>创始人</p>
+                </div>
+                <!-- Member 2 (Co-founder) -->
+                <div class="team-member mx-4">
+                  <a href="https://blog.wj0.top"><img src="https://q1.qlogo.cn/g?b=qq&nk=1298800228&s=640" alt="Jack"></a>
+                  <p>Jack<br>联合创始人</p>
+                </div>
+                <!-- Member 3 (Co-founder) -->
+                <div class="team-member mx-4">
+                  <a href="https://horatio.cn"><img src="https://q1.qlogo.cn/g?b=qq&nk=3033831844&s=640" alt="Lujing"></a>
+                  <p>Lujing<br>联合创始人</p>
+                </div>
+                <!-- Member 4 -->
+                <div class="team-member mx-4">
+                  <img src="https://q1.qlogo.cn/g?b=qq&nk=3206558616&s=640" alt="Horatio">
+                  <p>Cheng</p>
+                </div>
+                <!-- Member 5 -->
+                <div class="team-member mx-4">
+                  <img src="https://q1.qlogo.cn/g?b=qq&nk=2653382153&s=640" alt="Horatio">
+                  <p>Cheri</p>
+                </div>
+                <!-- Member 6 -->
+                <div class="team-member mx-4">
+                  <img src="https://q1.qlogo.cn/g?b=qq&nk=3211218425&s=640" alt="Horatio">
+                  <p>wdw0</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Team Members End - 每行显示三个成员 -->
         </div>
       </div>
     </div>
