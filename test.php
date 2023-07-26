@@ -45,12 +45,10 @@
     .team-member img {
       max-width: 100px;
       border-radius: 20px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
     /* 放大效果 */
-    .team-member:hover {
+    .team-member:hover img {
       transform: scale(1.1); /* 将头像放大1.1倍 */
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* 添加更明显的阴影效果 */
     }
   </style>
 </head>
