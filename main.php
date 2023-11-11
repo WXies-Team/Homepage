@@ -1,4 +1,4 @@
-    <section class="home bg-light" style="background-image: url(images/home.png)" id="home">
+    <section class="hero-1-bg bg-light" style="background-image: url(images/home.png)" id="home">
         <div class="container">
             <div class="row align-items-center justify-content-center">
                 <div class="col-lg-6">
