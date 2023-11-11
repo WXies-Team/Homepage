@@ -11,13 +11,13 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-center" id="mySidenav">
                 <li class="nav-item active">
-                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#home" class="nav-link">主页</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#about" class="nav-link">About Us</a>
+                    <a href="#about" class="nav-link">成员</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#services" class="nav-link">Services</a>
+                    <a href="#services" class="nav-link">服务</a>
                 </li>
             </ul>
 
