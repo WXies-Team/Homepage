@@ -42,15 +42,15 @@
     <!-- Navbar End -->
 
     <!-- Hero Start -->
-    <?php include('hero-section.php'); ?>
+    <?php include('main.php'); ?>
     <!-- Hero End -->
 
     <!-- About us Start -->
-    <?php include('about-section.php'); ?>
+    <?php include('about.php'); ?>
     <!-- About us End -->
 
     <!-- Services Start -->
-    <?php include('services-section.php'); ?>
+    <?php include('services.php'); ?>
     <!-- Services End -->
 
     <!-- Footer Start -->
