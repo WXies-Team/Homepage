@@ -3,7 +3,6 @@
 
     <!-- Head -->
     <?php include('head.php'); ?>
-    <!-- Head -->
 
 <body>
 
@@ -18,25 +17,19 @@
         </div>
     </div>
 
-    <!--Navbar Start-->
+    <!-- Navbar -->
     <?php include('navbar.php'); ?>
-    <!-- Navbar End -->
 
-    <!-- Hero Start -->
+    <!-- Main -->
     <?php include('main.php'); ?>
-    <!-- Hero End -->
 
-    <!-- About us Start -->
+    <!-- About us -->
     <?php include('about.php'); ?>
-    <!-- About us End -->
 
-    <!-- Services Start -->
-    <?php include('services.php'); ?>
-    <!-- Services End -->
+    <!-- Services -->
 
-    <!-- Footer Start -->
+    <!-- Footer -->
     <?php include('footer.php'); ?>
-    <!-- Footer End -->
 
     <!-- javascript -->
     <script src="js/jquery.min.js"></script>

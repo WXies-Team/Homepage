@@ -17,7 +17,7 @@
                             class="img-fluid d-block mx-auto">
                     </div>
                     <div class="mt-3">
-                        <p class="text-uppercase text-muted mb-2 f-13">Founder & CEO</p>
+                        <p class="text-uppercase text-muted mb-2 f-13">创始人</p>
                         <h4 class="f-18"><a href="https://horatio.cn/">Horatio</a></h4>
                     </div>
                 </div>
@@ -31,7 +31,7 @@
                             class="img-fluid d-block mx-auto">
                     </div>
                     <div class="mt-3">
-                        <p class="text-uppercase text-muted mb-2 f-13">Chief Technology Officer</p>
+                        <p class="text-uppercase text-muted mb-2 f-13">联合创始人</p>
                         <h4 class="f-18"><a href="https://blog.wj0.top/">Jack</a></h4>
                     </div>
                 </div>
@@ -41,12 +41,12 @@
             <div class="col-lg-4">
                 <div class="card border-0">
                     <div class="bg-soft-primary about-img rounded">
-                        <img src="https://q1.qlogo.cn/g?b=qq&nk=1298800228&s=640" alt="Jack"
+                        <img src="https://q1.qlogo.cn/g?b=qq&nk=3033831844&s=640" alt="Jack"
                             class="img-fluid d-block mx-auto">
                     </div>
                     <div class="mt-3">
-                        <p class="text-uppercase text-muted mb-2 f-13">Chief Marketing Officer</p>
-                        <h4 class="f-18"><a href="https://blog.wj0.top/">Jack</a></h4>
+                        <p class="text-uppercase text-muted mb-2 f-13">联合创始人</p>
+                        <h4 class="f-18"><a href="/">Lujing</a></h4>
                     </div>
                 </div>
             </div>
@@ -55,12 +55,12 @@
             <div class="col-lg-4">
                 <div class="card border-0">
                     <div class="bg-soft-primary about-img rounded">
-                        <img src="https://q1.qlogo.cn/g?b=qq&nk=1298800228&s=640" alt="Jack"
+                        <img src="https://q1.qlogo.cn/g?b=qq&nk=3206558616&s=640" alt="Cheng"
                             class="img-fluid d-block mx-auto">
                     </div>
                     <div class="mt-3">
-                        <p class="text-uppercase text-muted mb-2 f-13">Lead Developer</p>
-                        <h4 class="f-18"><a href="https://blog.wj0.top/">Jack</a></h4>
+                        <p class="text-uppercase text-muted mb-2 f-13">成员</p>
+                        <h4 class="f-18"><a href="/">Cheng</a></h4>
                     </div>
                 </div>
             </div>
@@ -69,12 +69,12 @@
             <div class="col-lg-4">
                 <div class="card border-0">
                     <div class="bg-soft-primary about-img rounded">
-                        <img src="https://q1.qlogo.cn/g?b=qq&nk=1298800228&s=640" alt="Jack"
+                        <img src="https://q1.qlogo.cn/g?b=qq&nk=2653382153&s=640" alt="Cheri"
                             class="img-fluid d-block mx-auto">
                     </div>
                     <div class="mt-3">
-                        <p class="text-uppercase text-muted mb-2 f-13">Designer</p>
-                        <h4 class="f-18"><a href="https://blog.wj0.top/">Jack</a></h4>
+                        <p class="text-uppercase text-muted mb-2 f-13">成员</p>
+                        <h4 class="f-18"><a href="/">Cheri</a></h4>
                     </div>
                 </div>
             </div>
@@ -83,12 +83,12 @@
             <div class="col-lg-4">
                 <div class="card border-0">
                     <div class="bg-soft-primary about-img rounded">
-                        <img src="https://q1.qlogo.cn/g?b=qq&nk=1298800228&s=640" alt="Jack"
+                        <img src="https://q1.qlogo.cn/g?b=qq&nk=3211218425&s=640" alt="wdw0"
                             class="img-fluid d-block mx-auto">
                     </div>
                     <div class="mt-3">
-                        <p class="text-uppercase text-muted mb-2 f-13">Project Manager</p>
-                        <h4 class="f-18"><a href="https://blog.wj0.top/">Jack</a></h4>
+                        <p class="text-uppercase text-muted mb-2 f-13">成员</p>
+                        <h4 class="f-18"><a href="/">wdw0</a></h4>
                     </div>
                 </div>
             </div>
