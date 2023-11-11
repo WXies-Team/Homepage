@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Nody - Responsive Bootstrap 4 Landing Page Template</title>
+    <title>唯蟹 Team - We Quest On and On</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Premium Bootstrap 4 Landing Page Template" />
     <meta name="keywords" content="bootstrap 4, premium, marketing, multipurpose" />
@@ -63,7 +63,7 @@
     <script src="js/scrollspy.min.js"></script>
     <script src="js/jquery.easing.min.js"></script>
     <!-- feather icons -->
-    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="js/feather.min.js"></script>
 
     <!-- carousel -->
     <script src="js/owl.carousel.min.js"></script>
