@@ -45,8 +45,9 @@
     /* About us */
     <?php include('about.php'); ?>
 
-    /* Services */
+    /* Services
     <?php include('services.php'); ?>
+    */
 
     /* Footer */
     <?php include('footer-section.php'); ?>
