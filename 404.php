@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="cn">
 
-<!-- Head -->
-<?php include('head.php'); ?>
-<!-- Head -->
+    <!-- Head -->
+    <?php include('head.php'); ?>
+
+    <!-- Navbar -->
+    <?php include('navbar.php'); ?>
+
 <style>
   /* Set the page height to 100vh (viewport height) */
   body,

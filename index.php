@@ -1,9 +1,9 @@
 ﻿<!DOCTYPE html>
 <html lang="cn">
 
-<!-- Head -->
-<?php include('head.php'); ?>
-<!-- Head -->
+    <!-- Head -->
+    <?php include('head.php'); ?>
+    <!-- Head -->
 
 <body>
 
