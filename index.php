@@ -1,8 +1,8 @@
 ﻿<!DOCTYPE html>
 <html lang="cn">
 
-    <!-- Head -->
-    <?php include('head.php'); ?>
+<!-- Head -->
+<?php include('head.php'); ?>
 
 <body>
 
@@ -27,6 +27,7 @@
     <?php include('about.php'); ?>
 
     <!-- Services -->
+    <?php include('services.php'); ?>
 
     <!-- Footer -->
     <?php include('footer.php'); ?>
