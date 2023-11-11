@@ -49,7 +49,7 @@
     <?php include('services.php'); ?>
 
     /* Footer */
-    <?php include('footer-section.php'); ?>
+    <?php include('footer.php'); ?>
 
     /* javascript */
     <script src="js/jquery.min.js"></script>
