@@ -2,8 +2,9 @@
         <div class="container">
             <div class="row align-items-center justify-content-center">
                 <div class="col-lg-6">
-                    <h1 class="display-4 font-weight-medium mb-4">唯蟹 Team</h1>
-                    <h1 class="hero-1-title font-weight-normal text-dark mb-4">We Quest On and On</h1>
+                    <h1 class="display-4 font-weight-medium mb-4">Hello,</h1>
+                    <h1 class="hero-1-title font-weight-normal text-dark mb-4">We Help You To Boost Your Business</h1>
+                    <p class="text-muted mb-4 pb-3">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione sequinesciunt.</p>
                     <a href="#" class="btn btn-primary">Get Started <span class="ml-2 right-icon">&#8594;</span></a>
                 </div>
                 <div class="col-lg-6 col-md-10">
