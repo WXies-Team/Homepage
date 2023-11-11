@@ -3,8 +3,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-7">
                     <div class="text-center mb-5">
-                        <h2 class="">Our Team</h2>
-                        <p class="text-muted">Meet the brilliant minds behind our success.</p>
+                        <h2 class="">成员</h2>
                     </div>
                 </div>
             </div>
