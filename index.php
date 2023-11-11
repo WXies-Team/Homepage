@@ -1,9 +1,9 @@
 ﻿<!DOCTYPE html>
 <html lang="cn">
 
-    <!--Navbar Start-->
-    <?php include('head.php'); ?>
-    <!-- Navbar End -->
+<!-- Head -->
+<?php include('head.php'); ?>
+<!-- Head -->
 
 <body>
 
