@@ -7,17 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="We Quest On and On">
     <meta name="keywords" content="唯蟹Team, Xies' Group, Blog233, HoratioWeb, lujing, jack">
-    <!-- favicon -->
+    /* favicon */
     <link rel="shortcut icon" href="/favicon.ico">
 
-    <!-- Pe-7 icon -->
+    /* Pe-7 icon */
     <link href="css/pe-icon-7.css" rel="stylesheet" type="text/css" />
 
-    <!--Slider-->
+    /* Slider */
     <link rel="stylesheet" href="css/owl.carousel.min.css" />
     <link rel="stylesheet" href="css/owl.theme.default.min.css" />
 
-    <!-- css -->
+    /* css */
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="css/style.min.css" rel="stylesheet" type="text/css" />
 
@@ -25,7 +25,7 @@
 
 <body>
 
-    <!-- Loader -->
+    /* Loader */
     <div id="preloader">
         <div id="status">
             <div class="spinner">
@@ -36,38 +36,33 @@
         </div>
     </div>
 
-    <!--Navbar Start-->
+    /* Navbar */
     <?php include('navbar.php'); ?>
-    <!-- Navbar End -->
 
-    <!-- Hero Start -->
+    /* Main */
     <?php include('main.php'); ?>
-    <!-- Hero End -->
 
-    <!-- About us Start -->
+    /* About us */
     <?php include('about.php'); ?>
-    <!-- About us End -->
 
-    <!-- Services Start -->
+    /* Services */
     <?php include('services.php'); ?>
-    <!-- Services End -->
 
-    <!-- Footer Start -->
+    /* Footer */
     <?php include('footer-section.php'); ?>
-    <!-- Footer End -->
 
-    <!-- javascript -->
+    /* javascript */
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/scrollspy.min.js"></script>
     <script src="js/jquery.easing.min.js"></script>
-    <!-- feather icons -->
+    /* feather icons */
     <script src="js/feather.min.js"></script>
 
-    <!-- carousel -->
+    /* carousel */
     <script src="js/owl.carousel.min.js"></script>
 
-    <!-- Main Js -->
+    /* Main Js */
     <script src="js/app.js"></script>
 
     <script>
