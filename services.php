@@ -40,7 +40,7 @@
                             <img src="images/services-icon/icon-3.png" alt="" class="img-fluid d-block">
                         </div>
                     </div>
-                    <h4 class="service-title mt-4 mb-3 f-18">数据分析准则 - "数据解读比拯救世界还伟大"</h4>
+                    <h4 class="service-title mt-4 mb-3 f-18">数据分析准则 - "数据承载世界"</h4>
                     <p class="service-subtitle mb-4 f-15">如果您对数据感到困惑，我们会派发虚拟翻译鹦鹉，因为在数字语境中，只有鹦鹉能够真正理解数据的语言。</p>
                 </div>
             </div>
