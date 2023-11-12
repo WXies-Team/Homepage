@@ -19,9 +19,6 @@
                 <li class="nav-item">
                     <a href="#services" class="nav-link">服务</a>
                 </li>
-                <li class="nav-item">
-                    <a href="https://github.com/WXies-Team" class="nav-link">GitHub</a>
-                </li>
             </ul>
 
         </div>
