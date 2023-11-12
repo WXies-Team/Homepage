@@ -19,8 +19,10 @@
                 <li class="nav-item">
                     <a href="#services" class="nav-link">服务</a>
                 </li>
+                <li class="nav-item">
+                    <a href="https://github.com/your-username" class="nav-link" target="_blank">GitHub</a>
+                </li>
             </ul>
-
         </div>
     </div>
 </nav>
