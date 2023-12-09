@@ -17,12 +17,12 @@
                         <div class="col-md-4">
                             <h4 class="text-white f-22 font-weight-normal mb-3">服务</h4>
                             <ul class="list-unstyled footer-sub-menu">
-                                <li><a href="#" class="footer-link">敬请期待</a></li>
+                                <li><a href="#" class="footer-link">暂仅供内部使用</a></li>
                         </div>
                         <div class="col-md-4">
                             <h4 class="text-white f-22 font-weight-normal mb-3">文档</h4>
                             <ul class="list-unstyled footer-sub-menu">
-                                <li><a href="#" class="footer-link">敬请期待</a></li>
+                                <li><a href="#" class="footer-link">暂仅供内部使用</a></li>
                             </ul>
                         </div>
                     </div>
