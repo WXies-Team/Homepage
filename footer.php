@@ -1,4 +1,4 @@
-<section class="footer" style="background-image: url(logo.png)" height="50">
+<section class="footer" style="background-image: url(logo.png); height: 50px;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4">
