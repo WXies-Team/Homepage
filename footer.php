@@ -1,11 +1,10 @@
-<section class="footer" style="background-image: url(images/hero-1-bg-img.png)">
+<section class="footer" style="background-image: url(logo.png)">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4">
                     <div class="mb-5">
                         <img src="images/logo-light.png" alt="" class="" height="35">
-                        <p class="text-white-50 my-4">Cras ultricies mi eu turpis sit hendrerit fringilla vestibulum ante ipsum primis in faucibus ultrices posuere cubilia.</p>
-                        <a href="#" class="text-white-70"><i class="icon mr-1" data-feather="instagram"></i> Join Us In Instagram</a>
+                        <p class="text-white-50 my-4">We Quest On and On.</p>
                     </div>
                 </div>
                 <div class="col-lg-7 offset-lg-1">
