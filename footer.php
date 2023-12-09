@@ -1,16 +1,17 @@
-<section class="footer" style="background-image: url(logo.png); background-size: 48px 48px; height: 48px; width: 48px;">
+<section class="footer" style="background-image: url(logo.png)">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4">
                     <div class="mb-5">
-                        <img src="images/logo-light.png" alt="" class="" height="35">
-                        <p class="text-white-50 my-4">We Quest On and On.</p>
+                        <img src="logo.png" alt="" class="" height="35">
+                        <p class="text-white-50 my-4">Cras ultricies mi eu turpis sit hendrerit fringilla vestibulum ante ipsum primis in faucibus ultrices posuere cubilia.</p>
+                        <a href="#" class="text-white-70"><i class="icon mr-1" data-feather="instagram"></i> Join Us In Instagram</a>
                     </div>
                 </div>
                 <div class="col-lg-7 offset-lg-1">
                     <div class="row">
                         <div class="col-md-4">
-                            <h4 class="text-white f-22 font-weight-normal mb-3">产品</h4>
+                            <h4 class="text-white f-22 font-weight-normal mb-3">Customer</h4>
                             <ul class="list-unstyled footer-sub-menu">
                                 <li><a href="#" class="footer-link">Works</a></li>
                                 <li><a href="#" class="footer-link">Strategy</a></li>
@@ -20,7 +21,7 @@
                             </ul>
                         </div>
                         <div class="col-md-4">
-                            <h4 class="text-white f-22 font-weight-normal mb-3">联系</h4>
+                            <h4 class="text-white f-22 font-weight-normal mb-3">Product</h4>
                             <ul class="list-unstyled footer-sub-menu">
                                 <li><a href="#" class="footer-link">Tranding</a></li>
                                 <li><a href="#" class="footer-link">Popular</a></li>
@@ -29,7 +30,7 @@
                             </ul>
                         </div>
                         <div class="col-md-4">
-                            <h4 class="text-white f-22 font-weight-normal mb-3">文档</h4>
+                            <h4 class="text-white f-22 font-weight-normal mb-3">Learn More</h4>
                             <ul class="list-unstyled footer-sub-menu">
                                 <li><a href="#" class="footer-link">Developers</a></li>
                                 <li><a href="#" class="footer-link">Support</a></li>
