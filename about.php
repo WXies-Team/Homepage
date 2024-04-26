@@ -10,10 +10,6 @@
         transition: transform 0.3s ease;
     }
 
-    .card:hover {
-        transform: translateY(-25px);
-    }
-
     .mt-3 {
         margin-top: 1.5rem;
     }
