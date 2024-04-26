@@ -14,16 +14,6 @@
         transform: translateY(-10px);
     }
 
-    .about-img {
-        overflow: hidden;
-    }
-
-    .about-img img {
-        width: 100%;
-        height: auto;
-        /* 不再使用border-radius，取消圆形效果 */
-    }
-
     .mt-3 {
         margin-top: 1.5rem;
     }
