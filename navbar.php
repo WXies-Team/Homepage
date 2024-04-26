@@ -2,7 +2,7 @@
     <div class="container">
         <!-- LOGO -->
         <a class="logo mr-3" href="/">
-            <img src="logo.png" alt="" class="" height="50">
+            <img src="https://www.wxies.cn/images/favicons/favicon.png" alt="" class="" height="50">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
             aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
