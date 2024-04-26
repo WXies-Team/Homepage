@@ -3,7 +3,7 @@
             <div class="row">
                 <div class="col-lg-4">
                     <div class="mb-5">
-                        <img src="https://www.wxies.cn/images/favicons/favicon.png" alt="" class="" height="35">
+                        <img src="https://www.wxies.cn/images/favicons/favicon.png" alt="" class="" height="80">
                         <p class="text-white-50 my-4">We Quest On and On.</p>
                     </div>
                 </div>
@@ -17,12 +17,11 @@
                         <div class="col-md-4">
                             <h4 class="text-white f-22 font-weight-normal mb-3">服务</h4>
                             <ul class="list-unstyled footer-sub-menu">
-                                <li><a href="#" class="footer-link">暂仅供内部使用</a></li>
+                                <li><a href="//api.wxies.cn" class="footer-link">API</a></li>
                         </div>
                         <div class="col-md-4">
                             <h4 class="text-white f-22 font-weight-normal mb-3">文档</h4>
                             <ul class="list-unstyled footer-sub-menu">
-                                <li><a href="#" class="footer-link">暂仅供内部使用</a></li>
                             </ul>
                         </div>
                     </div>
