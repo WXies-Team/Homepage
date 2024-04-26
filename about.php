@@ -1,9 +1,4 @@
 <style>
-    /* Center align the section content */
-    #about {
-        text-align: center;
-    }
-
     /* Style for team members */
     .card {
         border: 0;
