@@ -3,7 +3,7 @@
             <div class="row">
                 <div class="col-lg-4">
                     <div class="mb-5">
-                        <img src="logo.png" alt="" class="" height="35">
+                        <img src="https://www.wxies.cn/images/favicons/favicon.png" alt="" class="" height="35">
                         <p class="text-white-50 my-4">We Quest On and On.</p>
                     </div>
                 </div>
