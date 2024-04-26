@@ -3,18 +3,6 @@
     #about {
         text-align: center;
     }
-
-    /* Hyperlink style */
-    h4 a {
-        text-decoration: none;
-        color: #333;
-        /* Link color */
-    }
-
-    h4 a:hover {
-        color: #007bff;
-        /* Hover color */
-    }
 </style>
 <section class="section" id="about">
     <div class="container">
