@@ -1,8 +1,7 @@
 <style>
-    /* Style for team members */
-    .card {
-        border: 0;
-        transition: transform 0.3s ease;
+    /* Center align the section content */
+    #about {
+        text-align: center;
     }
 
     .mt-3 {
