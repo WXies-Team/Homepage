@@ -4,10 +4,6 @@
         text-align: center;
     }
 
-    .mt-3 {
-        margin-top: 1.5rem;
-    }
-
     /* Hyperlink style */
     h4 a {
         text-decoration: none;
