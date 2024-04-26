@@ -11,7 +11,7 @@
     }
 
     .card:hover {
-        transform: translateY(-10px);
+        transform: translateY(-25px);
     }
 
     .mt-3 {
