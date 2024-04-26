@@ -33,7 +33,7 @@
             <div class="col-lg-4">
                 <div class="card border-0">
                     <div class="bg-soft-primary about-img rounded">
-                        <img src="https://q1.qlogo.cn/g?b=qq&nk=1298800228&s=640" alt="Jack"
+                        <img src="https://api.wxies.cn/avatar/qq.php?qq=1298800228" alt="Jack"
                             class="img-fluid d-block mx-auto">
                     </div>
                     <div class="mt-3">
@@ -47,7 +47,7 @@
             <div class="col-lg-4">
                 <div class="card border-0">
                     <div class="bg-soft-primary about-img rounded">
-                        <img src="https://q1.qlogo.cn/g?b=qq&nk=3033831844&s=640" alt="Jack"
+                        <img src="https://api.wxies.cn/avatar/qq.php?qq=3033831844" alt="Jack"
                             class="img-fluid d-block mx-auto">
                     </div>
                     <div class="mt-3">
@@ -61,7 +61,7 @@
             <div class="col-lg-4">
                 <div class="card border-0">
                     <div class="bg-soft-primary about-img rounded">
-                        <img src="https://q1.qlogo.cn/g?b=qq&nk=3206558616&s=640" alt="Cheng"
+                        <img src="https://api.wxies.cn/avatar/qq.php?qq=3206558616" alt="Cheng"
                             class="img-fluid d-block mx-auto">
                     </div>
                     <div class="mt-3">
@@ -75,7 +75,7 @@
             <div class="col-lg-4">
                 <div class="card border-0">
                     <div class="bg-soft-primary about-img rounded">
-                        <img src="https://q1.qlogo.cn/g?b=qq&nk=2653382153&s=640" alt="Cheri"
+                        <img src="https://api.wxies.cn/avatar/qq.php?qq=2653382153" alt="Cheri"
                             class="img-fluid d-block mx-auto">
                     </div>
                     <div class="mt-3">
@@ -89,7 +89,7 @@
             <div class="col-lg-4">
                 <div class="card border-0">
                     <div class="bg-soft-primary about-img rounded">
-                        <img src="https://q1.qlogo.cn/g?b=qq&nk=3211218425&s=640" alt="wdw0"
+                        <img src="https://api.wxies.cn/avatar/qq.php?qq=3211218425" alt="wdw0"
                             class="img-fluid d-block mx-auto">
                     </div>
                     <div class="mt-3">
