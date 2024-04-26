@@ -55,7 +55,7 @@
             <div class="col-lg-4">
                 <div class="card border-0">
                     <div class="bg-soft-primary about-img rounded">
-                        <img src="https://q1.qlogo.cn/g?b=qq&nk=1115058004&s=640" alt="Horatio"
+                        <img src="https://api.wxies.cn/avatar/qq.php?qq=1115058004" alt="Horatio"
                             class="img-fluid d-block mx-auto">
                     </div>
                     <div class="mt-3">
