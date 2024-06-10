@@ -52,7 +52,7 @@
                     </div>
                     <div class="mt-3">
                         <p class="text-uppercase text-muted mb-2 f-13">联合创始人</p>
-                        <h4 class="f-18"><a href="https://wxies.cn/">Lujing</a></h4>
+                        <h4 class="f-18"><a href="https://api.wxies.cn/">Lujing</a></h4>
                     </div>
                 </div>
             </div>
@@ -66,7 +66,7 @@
                     </div>
                     <div class="mt-3">
                         <p class="text-uppercase text-muted mb-2 f-13">成员</p>
-                        <h4 class="f-18"><a href="https://wxies.cn/">Cheng</a></h4>
+                        <h4 class="f-18"><a href="https://api.wxies.cn/">Cheng</a></h4>
                     </div>
                 </div>
             </div>
@@ -80,7 +80,7 @@
                     </div>
                     <div class="mt-3">
                         <p class="text-uppercase text-muted mb-2 f-13">成员</p>
-                        <h4 class="f-18"><a href="https://wxies.cn/">Cheri</a></h4>
+                        <h4 class="f-18"><a href="https://api.wxies.cn/">Cheri</a></h4>
                     </div>
                 </div>
             </div>
@@ -94,7 +94,7 @@
                     </div>
                     <div class="mt-3">
                         <p class="text-uppercase text-muted mb-2 f-13">成员</p>
-                        <h4 class="f-18"><a href="https://wxies.cn/">wdw0</a></h4>
+                        <h4 class="f-18"><a href="https://api.wxies.cn/">wdw0</a></h4>
                     </div>
                 </div>
             </div>
