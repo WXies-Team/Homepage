@@ -17,12 +17,12 @@
                         <div class="col-md-4">
                             <h4 class="text-white f-22 font-weight-normal mb-3">服务</h4>
                             <ul class="list-unstyled footer-sub-menu">
-                                <li><a href="//api.wxies.cn" class="footer-link">API</a></li>
+                                <li><a href="//api.horatio.cn" class="footer-link">API</a></li>
                         </div>
                         <div class="col-md-4">
                             <h4 class="text-white f-22 font-weight-normal mb-3">文档</h4>
                             <ul class="list-unstyled footer-sub-menu">
-                                <li><a href="//doc.wxies.cn" class="footer-link">API 调用文档</a></li>
+                                <li><a href="//doc.horatio.cn" class="footer-link">API 调用文档</a></li>
                             </ul>
                         </div>
                     </div>

@@ -19,7 +19,7 @@
             <div class="col-lg-4">
                 <div class="card border-0">
                     <div class="bg-soft-primary about-img rounded">
-                        <img src="https://api.wxies.cn/avatar/qq.php?qq=1115058004" alt="Horatio"
+                        <img src="https://api.horatio.cn/avatar/qq.php?qq=1115058004" alt="Horatio"
                             class="img-fluid d-block mx-auto">
                     </div>
                     <div class="mt-3">
@@ -33,7 +33,7 @@
             <div class="col-lg-4">
                 <div class="card border-0">
                     <div class="bg-soft-primary about-img rounded">
-                        <img src="https://api.wxies.cn/avatar/qq.php?qq=1298800228" alt="Jack"
+                        <img src="https://api.horatio.cn/avatar/qq.php?qq=1298800228" alt="Jack"
                             class="img-fluid d-block mx-auto">
                     </div>
                     <div class="mt-3">
@@ -47,12 +47,12 @@
             <div class="col-lg-4">
                 <div class="card border-0">
                     <div class="bg-soft-primary about-img rounded">
-                        <img src="https://api.wxies.cn/avatar/qq.php?qq=3033831844" alt="Jack"
+                        <img src="https://api.horatio.cn/avatar/qq.php?qq=3033831844" alt="Jack"
                             class="img-fluid d-block mx-auto">
                     </div>
                     <div class="mt-3">
                         <p class="text-uppercase text-muted mb-2 f-13">联合创始人</p>
-                        <h4 class="f-18"><a href="https://api.wxies.cn/">Lujing</a></h4>
+                        <h4 class="f-18"><a href="https://api.horatio.cn/">Lujing</a></h4>
                     </div>
                 </div>
             </div>
@@ -61,12 +61,12 @@
             <div class="col-lg-4">
                 <div class="card border-0">
                     <div class="bg-soft-primary about-img rounded">
-                        <img src="https://api.wxies.cn/avatar/qq.php?qq=3206558616" alt="Cheng"
+                        <img src="https://api.horatio.cn/avatar/qq.php?qq=3206558616" alt="Cheng"
                             class="img-fluid d-block mx-auto">
                     </div>
                     <div class="mt-3">
                         <p class="text-uppercase text-muted mb-2 f-13">成员</p>
-                        <h4 class="f-18"><a href="https://api.wxies.cn/">Cheng</a></h4>
+                        <h4 class="f-18"><a href="https://api.horatio.cn/">Cheng</a></h4>
                     </div>
                 </div>
             </div>
@@ -75,12 +75,12 @@
             <div class="col-lg-4">
                 <div class="card border-0">
                     <div class="bg-soft-primary about-img rounded">
-                        <img src="https://api.wxies.cn/avatar/qq.php?qq=2653382153" alt="Cheri"
+                        <img src="https://api.horatio.cn/avatar/qq.php?qq=2653382153" alt="Cheri"
                             class="img-fluid d-block mx-auto">
                     </div>
                     <div class="mt-3">
                         <p class="text-uppercase text-muted mb-2 f-13">成员</p>
-                        <h4 class="f-18"><a href="https://api.wxies.cn/">Cheri</a></h4>
+                        <h4 class="f-18"><a href="https://api.horatio.cn/">Cheri</a></h4>
                     </div>
                 </div>
             </div>
@@ -89,12 +89,12 @@
             <div class="col-lg-4">
                 <div class="card border-0">
                     <div class="bg-soft-primary about-img rounded">
-                        <img src="https://api.wxies.cn/avatar/qq.php?qq=3211218425" alt="wdw0"
+                        <img src="https://api.horatio.cn/avatar/qq.php?qq=3211218425" alt="wdw0"
                             class="img-fluid d-block mx-auto">
                     </div>
                     <div class="mt-3">
                         <p class="text-uppercase text-muted mb-2 f-13">成员</p>
-                        <h4 class="f-18"><a href="https://api.wxies.cn/">wdw0</a></h4>
+                        <h4 class="f-18"><a href="https://api.horatio.cn/">wdw0</a></h4>
                     </div>
                 </div>
             </div>
