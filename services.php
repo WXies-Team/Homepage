@@ -16,8 +16,8 @@
                             <img src="images/services-icon/icon-1.png" alt="" class="img-fluid d-block">
                         </div>
                     </div>
-                    <h4 class="service-title mt-4 mb-3 f-18">用户支持准则 - "代码搭救超能力"</h4>
-                    <p class="service-subtitle mb-4 f-15">如果您在代码的迷宫中迷失方向，我们会派遣虚拟指南企鹅为您指路，因为在互联网世界里，企鹅是最佳导航员。</p>
+                    <h4 class="service-title mt-4 mb-3 f-18">超快跑路速度"</h4>
+                    <p class="service-subtitle mb-4 f-15">从删库到跑路仅仅只需两分钟，我们以卓越删库跑路的能力被大家认可为。为全球用户提供最垃圾的云服务</p>
                 </div>
             </div>
             <div class="col-lg-4">
@@ -28,8 +28,8 @@
                             <img src="images/services-icon/icon-2.png" alt="" class="img-fluid d-block">
                         </div>
                     </div>
-                    <h4 class="service-title mt-4 mb-3 f-18">网络安全准则 - "数据保卫战"</h4>
-                    <p class="service-subtitle mb-4 f-15">如果有人试图攻击我们的系统，我们会发动虚拟恐龙大军，因为在互联网的世界里，只有恐龙能够真正保护数字秘境。</p>
+                    <h4 class="service-title mt-4 mb-3 f-18">低于50%的SLA保证"</h4>
+                    <p class="service-subtitle mb-4 f-15">我们为您提供极低的SLA保证，降低您网站的在线率。做垃圾，我们是认真的</p>
                 </div>
             </div>
             <div class="col-lg-4">
@@ -40,8 +40,8 @@
                             <img src="images/services-icon/icon-3.png" alt="" class="img-fluid d-block">
                         </div>
                     </div>
-                    <h4 class="service-title mt-4 mb-3 f-18">数据分析准则 - "数据承载世界"</h4>
-                    <p class="service-subtitle mb-4 f-15">如果您对数据感到困惑，我们会派发虚拟翻译鹦鹉，因为在数字语境中，只有鹦鹉能够真正理解数据的语言。</p>
+                    <h4 class="service-title mt-4 mb-3 f-18">数据随处可见</h4>
+                    <p class="service-subtitle mb-4 f-15">我们的云服务拥有各种漏洞BUG，使数据100%暴露。为您的隐私不负任何保障</p>
                 </div>
             </div>
         </div>
