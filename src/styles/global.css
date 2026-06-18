@@ -130,6 +130,11 @@ body {
   will-change: transform;
 }
 
+.service-icon-wrap img {
+  filter: brightness(0.32) contrast(1.05);
+  transition: filter 0.5s ease;
+}
+
 .service-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 25px 60px -20px rgba(57, 86, 222, 0.35),
@@ -140,7 +145,10 @@ body {
 
 .service-card:hover .service-icon-wrap {
   background: rgba(255, 255, 255, 0.12);
-  filter: brightness(1.2);
+}
+
+.service-card:hover .service-icon-wrap img {
+  filter: brightness(1.1);
 }
 
 .service-card:hover h3,

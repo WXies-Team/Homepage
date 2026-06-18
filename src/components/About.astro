@@ -4,37 +4,31 @@ const members = [
   {
     name: 'Horatio',
     role: '创始人',
-    qq: '1115058004',
     link: 'https://horatio.cn/',
   },
   {
     name: 'Jack',
     role: '联合创始人',
-    qq: '1298800228',
     link: 'https://blog.wj0.top/',
   },
   {
     name: 'Lujing',
     role: '联合创始人',
-    qq: '3033831844',
     link: 'https://api.horatio.cn/',
   },
   {
     name: 'Cheng',
     role: '成员',
-    qq: '3206558616',
     link: 'https://api.horatio.cn/',
   },
   {
     name: 'Cheri',
     role: '成员',
-    qq: '2653382153',
     link: 'https://api.horatio.cn/',
   },
   {
     name: 'wdw0',
     role: '成员',
-    qq: '3211218425',
     link: 'https://api.horatio.cn/',
   },
 ];
@@ -66,8 +60,8 @@ const members = [
             <div class="p-10 bg-[color:var(--color-primary-soft)]">
               <div class="team-avatar mx-auto w-32 h-32 rounded-full overflow-hidden bg-white shadow-inner ring-4 ring-white">
                 <img
-                  src={`https://api.horatio.cn/avatar/qq.php?qq=${member.qq}`}
-                  alt={member.name}
+                  src={`/images/members/avatar-${member.name}.jpg`}
+                  alt=`Avatar of ${member.name}`
                   class="w-full h-full object-cover"
                   loading="lazy"
                 />
