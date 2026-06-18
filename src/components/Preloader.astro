@@ -1,0 +1,28 @@
+---
+// Elegant gradient preloader with the signature three bouncing dots
+---
+
+<div id="preloader" class="fixed inset-0 z-[999] flex items-center justify-center"
+     style="background: linear-gradient(135deg, #1097bd 0%, #3956de 100%);">
+  <div class="flex gap-3">
+    <span class="w-5 h-5 rounded-full bg-white shadow-[0_0_30px_rgba(255,255,255,0.5)]"
+          style="animation: bounce-dot 1.4s infinite ease-in-out both; animation-delay: -0.32s;"></span>
+    <span class="w-5 h-5 rounded-full bg-white shadow-[0_0_30px_rgba(255,255,255,0.5)]"
+          style="animation: bounce-dot 1.4s infinite ease-in-out both; animation-delay: -0.16s;"></span>
+    <span class="w-5 h-5 rounded-full bg-white shadow-[0_0_30px_rgba(255,255,255,0.5)]"
+          style="animation: bounce-dot 1.4s infinite ease-in-out both;"></span>
+  </div>
+</div>
+
+<script is:inline>
+  window.addEventListener('load', () => {
+    const preloader = document.getElementById('preloader');
+    if (preloader) {
+      setTimeout(() => {
+        preloader.style.transition = 'opacity 0.5s ease';
+        preloader.style.opacity = '0';
+        setTimeout(() => preloader.remove(), 500);
+      }, 350);
+    }
+  });
+</script>

@@ -1,0 +1,57 @@
+---
+// Footer - dark elegant with subtle gradient texture
+const year = new Date().getFullYear();
+---
+
+<footer class="relative overflow-hidden text-white"
+        style="background: linear-gradient(135deg, #292d32 0%, #1e2a5e 100%);">
+  <!-- decorative top line -->
+  <div class="absolute top-0 left-0 right-0 h-[2px]"
+       style="background: linear-gradient(90deg, transparent 0%, rgba(57,86,222,0.6) 50%, transparent 100%);"></div>
+
+  <div class="relative max-w-6xl mx-auto px-6 lg:px-8 py-20">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+      <!-- Brand -->
+      <div class="lg:col-span-5">
+        <div class="flex items-center gap-3 mb-5">
+          <img src="/images/favicons/favicon.png" alt="" class="h-12 w-12 rounded-xl" />
+          <span class="font-[family-name:var(--font-display)] text-xl font-semibold">唯蟹 Team</span>
+        </div>
+        <p class="text-[rgba(255,255,255,0.65)] text-sm leading-relaxed max-w-xs">
+          We Quest On and On.
+        </p>
+      </div>
+
+      <!-- Links -->
+      <div class="lg:col-span-7">
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-10">
+          <div>
+            <h4 class="font-[family-name:var(--font-display)] text-base font-semibold mb-4 text-white"></h4>
+            <ul class="space-y-3"></ul>
+          </div>
+
+          <div>
+            <h4 class="font-[family-name:var(--font-display)] text-base font-semibold mb-4 text-white">服务</h4>
+            <ul class="space-y-3 text-sm">
+              <li><a href="https://api.horatio.cn" class="text-[rgba(255,255,255,0.65)] hover:text-white transition-colors">API</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-[family-name:var(--font-display)] text-base font-semibold mb-4 text-white">文档</h4>
+            <ul class="space-y-3 text-sm">
+              <li><a href="https://doc.horatio.cn" class="text-[rgba(255,255,255,0.65)] hover:text-white transition-colors">API 调用文档</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Divider -->
+    <div class="mt-16 pt-8 border-t border-[rgba(255,255,255,0.1)]">
+      <p class="text-center text-sm text-[rgba(255,255,255,0.55)]">
+        © {year} 唯蟹 Team 版权所有
+      </p>
+    </div>
+  </div>
+</footer>

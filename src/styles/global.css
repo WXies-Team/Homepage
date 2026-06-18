@@ -1,0 +1,213 @@
+@import "tailwindcss";
+
+/*
+ * Fonts are loaded via <link> in Layout.astro head.
+ * This avoids CSS @import ordering issues and improves first paint.
+ */
+
+@theme {
+  /* ---------- Colors: Editorial Ironic Tech ---------- */
+  --color-primary: #3956de;
+  --color-primary-soft: rgba(57, 86, 222, 0.08);
+  --color-primary-soft-hover: rgba(57, 86, 222, 0.14);
+  --color-midnight: #1e2a5e;
+  --color-accent: #2dd6b7;
+  --color-text: #343a40;
+  --color-muted: #9b9bae;
+  --color-bg: #fbfbfd;
+  --color-bg-dark: #292d32;
+  --color-border: #eaeaf5;
+
+  /* ---------- Typography ---------- */
+  --font-display: "Noto Serif SC", "Source Han Serif SC", Georgia, "PingFang SC", serif;
+  --font-body: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", sans-serif;
+
+  /* ---------- Spacing / Sizing ---------- */
+  --spacing-section: 7rem;
+
+  /* ---------- Animations ---------- */
+  --animate-fade-up: fade-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+  --animate-fade-in: fade-in 0.6s ease-out both;
+  --animate-bounce-dot: bounce-dot 1.4s infinite ease-in-out both;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-float-reverse: float 8s ease-in-out infinite reverse;
+  --animate-shimmer: shimmer 3s linear infinite;
+}
+
+/* ---------- Keyframes ---------- */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes bounce-dot {
+  0%, 80%, 100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -1000px 0; }
+  100% { background-position: 1000px 0; }
+}
+
+/* ---------- Base ---------- */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ---------- Reveal on Scroll ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.45s; }
+.reveal-delay-5 { transition-delay: 0.6s; }
+.reveal-delay-6 { transition-delay: 0.75s; }
+
+/* ---------- Sticky Nav ---------- */
+.nav-scrolled {
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: saturate(180%) blur(14px);
+  -webkit-backdrop-filter: saturate(180%) blur(14px);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.04),
+              0 8px 30px -12px rgba(30, 42, 94, 0.15);
+}
+
+/* ---------- Hero background mesh ---------- */
+.hero-mesh {
+  background:
+    radial-gradient(circle at 20% 30%, rgba(57, 86, 222, 0.12) 0%, transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(45, 214, 183, 0.10) 0%, transparent 45%),
+    linear-gradient(180deg, #fbfbfd 0%, #f5f6fb 100%);
+}
+
+/* ---------- Service card hover ---------- */
+.service-card {
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+              background-color 0.4s ease,
+              border-color 0.4s ease;
+  will-change: transform;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 25px 60px -20px rgba(57, 86, 222, 0.35),
+              0 8px 20px -8px rgba(30, 42, 94, 0.15);
+  background-color: #3956de;
+  border-color: #3956de;
+}
+
+.service-card:hover .service-icon-wrap {
+  background: rgba(255, 255, 255, 0.12);
+  filter: brightness(1.2);
+}
+
+.service-card:hover h3,
+.service-card:hover p {
+  color: #ffffff !important;
+}
+
+.service-card:hover p {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+/* ---------- Team card hover ---------- */
+.team-card {
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.team-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 50px -15px rgba(30, 42, 94, 0.2);
+}
+
+.team-card:hover .team-avatar {
+  transform: scale(1.03);
+}
+
+.team-avatar {
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* ---------- Nav link underline ---------- */
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #3956de;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* ---------- Selection ---------- */
+::selection {
+  background-color: rgba(57, 86, 222, 0.25);
+  color: #1e2a5e;
+}
+
+/* ---------- Scrollbar (webkit) ---------- */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-muted);
+}

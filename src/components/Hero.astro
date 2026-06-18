@@ -1,0 +1,48 @@
+---
+// Hero section: editorial-style asymmetric layout
+---
+
+<section id="home" class="hero-mesh relative overflow-hidden pt-32 pb-28 md:pt-40 md:pb-36">
+  <div class="max-w-6xl mx-auto px-6 lg:px-8">
+    <div class="grid md:grid-cols-2 gap-16 items-center">
+      <!-- Text -->
+      <div class="order-2 md:order-1">
+        <div class="reveal">
+          <span class="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-[color:var(--color-primary)] font-semibold">
+            <span class="w-1.5 h-1.5 rounded-full bg-[color:var(--color-primary)]"></span>
+            We Quest On and On
+          </span>
+        </div>
+
+        <h1 class="reveal reveal-delay-1 mt-6 font-[family-name:var(--font-display)] text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight text-[color:var(--color-midnight)]">
+          唯蟹 Team
+        </h1>
+
+        <p class="reveal reveal-delay-2 mt-8 text-lg md:text-xl text-[color:var(--color-text)] leading-relaxed max-w-md">
+          一群热爱技术、专注于创造有趣数字世界的伙伴们，用代码书写属于我们自己的故事。
+        </p>
+
+        <div class="reveal reveal-delay-3 mt-10 flex items-center gap-4">
+          <a href="#about" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-[color:var(--color-primary)] text-white font-medium text-sm shadow-[0_10px_30px_-10px_rgba(57,86,222,0.6)] hover:shadow-[0_14px_40px_-12px_rgba(57,86,222,0.7)] hover:-translate-y-0.5 transition-all duration-300">
+            认识成员
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+          <a href="#services" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-white text-[color:var(--color-midnight)] font-medium text-sm border border-[color:var(--color-border)] hover:border-[color:var(--color-primary)] hover:text-[color:var(--color-primary)] transition-all duration-300">
+            查看服务
+          </a>
+        </div>
+      </div>
+
+      <!-- Image -->
+      <div class="order-1 md:order-2 relative">
+        <div class="reveal reveal-delay-2 relative">
+          <div class="absolute -top-8 -left-8 w-24 h-24 rounded-full bg-[color:var(--color-primary-soft)]"></div>
+          <div class="absolute -bottom-10 -right-6 w-32 h-32 rounded-full"
+               style="background: radial-gradient(circle, rgba(45,214,183,0.15) 0%, transparent 70%);"></div>
+          <img src="/images/hero-img.png" alt="唯蟹 Team" class="relative z-10 w-full max-w-md mx-auto block"
+               style="animation: float 6s ease-in-out infinite;" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,87 @@
+---
+// Team member section - keeps original 6 members and their data
+const members = [
+  {
+    name: 'Horatio',
+    role: '创始人',
+    qq: '1115058004',
+    link: 'https://horatio.cn/',
+  },
+  {
+    name: 'Jack',
+    role: '联合创始人',
+    qq: '1298800228',
+    link: 'https://blog.wj0.top/',
+  },
+  {
+    name: 'Lujing',
+    role: '联合创始人',
+    qq: '3033831844',
+    link: 'https://api.horatio.cn/',
+  },
+  {
+    name: 'Cheng',
+    role: '成员',
+    qq: '3206558616',
+    link: 'https://api.horatio.cn/',
+  },
+  {
+    name: 'Cheri',
+    role: '成员',
+    qq: '2653382153',
+    link: 'https://api.horatio.cn/',
+  },
+  {
+    name: 'wdw0',
+    role: '成员',
+    qq: '3211218425',
+    link: 'https://api.horatio.cn/',
+  },
+];
+---
+
+<section id="about" class="py-28 md:py-32 bg-white">
+  <div class="max-w-6xl mx-auto px-6 lg:px-8">
+    <!-- Heading -->
+    <div class="text-center max-w-2xl mx-auto mb-20 reveal">
+      <span class="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-[color:var(--color-primary)] font-semibold">
+        <span class="w-1.5 h-1.5 rounded-full bg-[color:var(--color-primary)]"></span>
+        Our Team
+      </span>
+      <h2 class="mt-5 font-[family-name:var(--font-display)] text-4xl md:text-5xl font-bold text-[color:var(--color-midnight)] tracking-tight">
+        成员
+      </h2>
+      <p class="mt-5 text-[color:var(--color-muted)] text-base md:text-lg leading-relaxed">
+        团队的核心力量，每一位成员都是独一无二的存在
+      </p>
+    </div>
+
+    <!-- Cards Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      {
+        members.map((member, i) => (
+          <div
+            class={`team-card reveal reveal-delay-${(i % 6) + 1} bg-white rounded-2xl border border-[color:var(--color-border)] overflow-hidden`}
+          >
+            <div class="p-10 bg-[color:var(--color-primary-soft)]">
+              <div class="team-avatar mx-auto w-32 h-32 rounded-full overflow-hidden bg-white shadow-inner ring-4 ring-white">
+                <img
+                  src={`https://api.horatio.cn/avatar/qq.php?qq=${member.qq}`}
+                  alt={member.name}
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+            <div class="px-6 py-6 text-center">
+              <p class="text-xs uppercase tracking-[0.18em] text-[color:var(--color-muted)] font-semibold mb-2">{member.role}</p>
+              <h4 class="font-[family-name:var(--font-display)] text-xl font-semibold text-[color:var(--color-midnight)]">
+                <a href={member.link} target="_blank" rel="noopener" class="hover:text-[color:var(--color-primary)] transition-colors">{member.name}</a>
+              </h4>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
