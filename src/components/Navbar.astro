@@ -1,24 +1,26 @@
 ---
 // Sticky navbar with glassmorphism effect
+const navLinks = [
+  { href: '#home', label: '主页' },
+  { href: '#about', label: '成员' },
+  { href: '#services', label: '服务' },
+];
 ---
 
 <nav data-navbar class="fixed top-4 left-1/2 -translate-x-1/2 w-full max-w-6xl z-50 transition-all duration-300 rounded-[24px] backdrop-blur-[20px]">
   <div class="px-6 lg:px-8">
     <div class="flex items-center justify-between h-[72px]">
-      <!-- Logo -->
       <a href="#home" class="flex items-center gap-3 group">
-        <img src="/images/favicons/favicon.png" alt="唯蟹 Team" class="h-10 w-10 rounded-xl shadow-sm group-hover:scale-105 transition-transform duration-300" />
+        <img src="/favicon.png" alt="唯蟹 Team" class="h-10 w-10 rounded-xl shadow-sm group-hover:scale-105 transition-transform duration-300" width="40" height="40" />
         <span class="font-[family-name:var(--font-display)] text-lg font-semibold text-[color:var(--color-midnight)] tracking-tight hidden sm:block">唯蟹 Team</span>
       </a>
 
-      <!-- Desktop Nav -->
       <ul class="hidden md:flex items-center gap-10 text-sm font-medium text-[color:var(--color-text)]">
-        <li><a href="#home" class="nav-link transition-colors duration-200 hover:text-[color:var(--color-primary)]">主页</a></li>
-        <li><a href="#about" class="nav-link transition-colors duration-200 hover:text-[color:var(--color-primary)]">成员</a></li>
-        <li><a href="#services" class="nav-link transition-colors duration-200 hover:text-[color:var(--color-primary)]">服务</a></li>
+        {navLinks.map(({ href, label }) => (
+          <li><a href={href} class="nav-link transition-colors duration-200 hover:text-[color:var(--color-primary)]">{label}</a></li>
+        ))}
       </ul>
 
-      <!-- Mobile Toggle -->
       <button id="mobile-toggle" class="md:hidden p-2 -mr-2 rounded-lg hover:bg-[color:var(--color-primary-soft)] transition-colors duration-200" aria-label="切换菜单">
         <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-[color:var(--color-midnight)]">
           <line x1="3" y1="6" x2="21" y2="6"></line>
@@ -28,12 +30,11 @@
       </button>
     </div>
 
-    <!-- Mobile Menu -->
     <div id="mobile-menu" class="md:hidden hidden overflow-hidden transition-all duration-300">
       <ul class="pb-4 pt-2 flex flex-col gap-1 text-base font-medium">
-        <li><a href="#home" class="block py-3 px-2 rounded-lg hover:bg-[color:var(--color-primary-soft)] hover:text-[color:var(--color-primary)] transition-colors">主页</a></li>
-        <li><a href="#about" class="block py-3 px-2 rounded-lg hover:bg-[color:var(--color-primary-soft)] hover:text-[color:var(--color-primary)] transition-colors">成员</a></li>
-        <li><a href="#services" class="block py-3 px-2 rounded-lg hover:bg-[color:var(--color-primary-soft)] hover:text-[color:var(--color-primary)] transition-colors">服务</a></li>
+        {navLinks.map(({ href, label }) => (
+          <li><a href={href} class="block py-3 px-2 rounded-lg hover:bg-[color:var(--color-primary-soft)] hover:text-[color:var(--color-primary)] transition-colors">{label}</a></li>
+        ))}
       </ul>
     </div>
   </div>

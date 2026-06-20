@@ -4,17 +4,17 @@ const services = [
   {
     title: '超快跑路速度',
     desc: '从删库到跑路仅仅只需两分钟。我们以卓越删库跑路的能力被大家认可',
-    icon: '/images/services-icon/icon-1.png',
+    icon: '/images/services/icon-1.png',
   },
   {
     title: '低于50%的SLA保证',
     desc: '我们为您提供极低的SLA保证，降低您网站的在线率。做垃圾，我们是认真的',
-    icon: '/images/services-icon/icon-2.png',
+    icon: '/images/services/icon-2.png',
   },
   {
     title: '数据随处可见',
     desc: '我们的云服务存在各种漏洞BUG，使数据100%暴露。为您的隐私不负任何保障',
-    icon: '/images/services-icon/icon-3.png',
+    icon: '/images/services/icon-3.png',
   },
 ];
 ---
@@ -43,9 +43,9 @@ const services = [
             class={`service-card reveal reveal-delay-${i + 1} bg-white rounded-[20px] border border-[color:var(--color-border)] p-10 text-center`}
           >
             <div class="service-icon-wrap mx-auto w-28 h-28 rounded-[16px] flex items-center justify-center mb-6 transition-all duration-500"
-                 style="background-image: url('/images/service-icon-bg.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                 style="background-image: url('/images/services/bg.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
               <div class="flex items-center justify-center w-full h-full p-4">
-                <img src={service.icon} alt="" class="max-w-full max-h-full object-contain" />
+                <img src={service.icon} alt="" class="max-w-full max-h-full object-contain" width="48" height="48" />
               </div>
             </div>
             <h3 class="font-[family-name:var(--font-display)] text-xl font-semibold text-[color:var(--color-midnight)] mb-4 leading-snug transition-colors duration-300">

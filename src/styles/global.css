@@ -22,9 +22,6 @@
   --font-display: "Noto Sans SC", "Noto Sans", sans-serif;
   --font-body: "Noto Sans SC", "Noto Sans", sans-serif;
 
-  /* ---------- Spacing / Sizing ---------- */
-  --spacing-section: 7rem;
-
   /* ---------- Animations: iOS Spring-like ---------- */
   --animate-fade-up: fade-up 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   --animate-fade-in: fade-in 0.5s ease-out both;
