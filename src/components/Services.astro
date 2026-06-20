@@ -22,7 +22,7 @@ const services = [
 <section id="services" class="py-28 md:py-32 bg-[color:var(--color-bg)]">
   <div class="max-w-6xl mx-auto px-6 lg:px-8">
     <!-- Heading -->
-    <div class="text-center max-w-2xl mx-auto mb-20 reveal">
+    <div class="text-center max-w-2xl mx-auto mb-20">
       <span class="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-[color:var(--color-primary)] font-semibold">
         <span class="w-1.5 h-1.5 rounded-full bg-[color:var(--color-primary)]"></span>
         What We Offer
@@ -40,7 +40,7 @@ const services = [
       {
         services.map((service, i) => (
           <div
-            class={`service-card reveal reveal-delay-${i + 1} bg-white rounded-[20px] border border-[color:var(--color-border)] p-10 text-center`}
+            class={`service-card bg-[color:var(--color-bg-card)] rounded-[20px] shadow-[0_2px_12px_-4px_rgba(0,0,0,0.08)] dark:shadow-[0_2px_12px_-4px_rgba(0,0,0,0.3)] p-10 text-center`}
           >
             <div class="service-icon-wrap mx-auto w-28 h-28 rounded-[16px] flex items-center justify-center mb-6 transition-all duration-500"
                  style="background-image: url('/images/services/bg.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">

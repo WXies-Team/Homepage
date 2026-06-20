@@ -10,10 +10,10 @@ const members = [
 ];
 ---
 
-<section id="about" class="py-28 md:py-32 bg-white">
+<section id="about" class="py-28 md:py-32 bg-[color:var(--color-bg-card)]">
   <div class="max-w-6xl mx-auto px-6 lg:px-8">
     <!-- Heading -->
-    <div class="text-center max-w-2xl mx-auto mb-20 reveal">
+    <div class="text-center max-w-2xl mx-auto mb-20">
       <span class="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-[color:var(--color-primary)] font-semibold">
         <span class="w-1.5 h-1.5 rounded-full bg-[color:var(--color-primary)]"></span>
         Our Team
@@ -31,10 +31,10 @@ const members = [
       {
         members.map((member, i) => (
           <div
-            class={`team-card reveal reveal-delay-${(i % 6) + 1} bg-white rounded-[20px] border border-[color:var(--color-border)] overflow-hidden`}
+            class={`team-card bg-[color:var(--color-bg-card)] rounded-[20px] shadow-[0_2px_12px_-4px_rgba(0,0,0,0.08)] dark:shadow-[0_2px_12px_-4px_rgba(0,0,0,0.3)] overflow-hidden`}
           >
             <div class="p-10 bg-[color:var(--color-primary-soft)]">
-              <div class="team-avatar mx-auto w-32 h-32 rounded-[20px] overflow-hidden bg-white shadow-inner ring-4 ring-white">
+              <div class="team-avatar mx-auto w-32 h-32 rounded-[20px] overflow-hidden bg-[color:var(--color-bg-card)] shadow-inner ring-4 ring-[color:var(--color-bg-card)]">
                 <img
                   src={`/images/members/avatar-${member.name}.jpg`}
                   alt=`Avatar of ${member.name}`

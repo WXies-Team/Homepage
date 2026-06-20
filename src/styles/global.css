@@ -6,7 +6,7 @@
  */
 
 @theme {
-  /* ---------- Colors: iOS 18 Inspired ---------- */
+  /* ---------- Colors: iOS 18 Light Mode ---------- */
   --color-primary: #007AFF;
   --color-primary-soft: rgba(0, 122, 255, 0.08);
   --color-primary-soft-hover: rgba(0, 122, 255, 0.14);
@@ -15,7 +15,7 @@
   --color-text: #3C3C43;
   --color-muted: #8E8E93;
   --color-bg: #F2F2F7;
-  --color-bg-dark: #1C1C1E;
+  --color-bg-card: #FFFFFF;
   --color-border: rgba(0, 0, 0, 0.08);
 
   /* ---------- Typography ---------- */
@@ -23,12 +23,25 @@
   --font-body: "Noto Sans SC", "Noto Sans", sans-serif;
 
   /* ---------- Animations: iOS Spring-like ---------- */
-  --animate-fade-up: fade-up 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  --animate-fade-in: fade-in 0.5s ease-out both;
-  --animate-bounce-dot: bounce-dot 1.4s infinite ease-in-out both;
   --animate-float: float 6s ease-in-out infinite;
   --animate-float-reverse: float 8s ease-in-out infinite reverse;
   --animate-shimmer: shimmer 3s linear infinite;
+}
+
+/* ---------- Dark Mode: iOS 18 ---------- */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primary: #0A84FF;
+    --color-primary-soft: rgba(10, 132, 255, 0.12);
+    --color-primary-soft-hover: rgba(10, 132, 255, 0.2);
+    --color-midnight: #FFFFFF;
+    --color-accent: #30D158;
+    --color-text: #EBEBF5;
+    --color-muted: #8E8E93;
+    --color-bg: #000000;
+    --color-bg-card: #1C1C1E;
+    --color-border: rgba(255, 255, 255, 0.1);
+  }
 }
 
 /* ---------- Keyframes ---------- */
@@ -80,26 +93,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* ---------- Reveal on Scroll: iOS 18 Spring Animation ---------- */
-.reveal {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-              transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.reveal.is-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.reveal-delay-1 { transition-delay: 0.08s; }
-.reveal-delay-2 { transition-delay: 0.16s; }
-.reveal-delay-3 { transition-delay: 0.24s; }
-.reveal-delay-4 { transition-delay: 0.32s; }
-.reveal-delay-5 { transition-delay: 0.40s; }
-.reveal-delay-6 { transition-delay: 0.48s; }
-
 /* ---------- Sticky Nav: iOS 18 Glassmorphism ---------- */
 [data-navbar]:not(.nav-scrolled) {
   background-color: transparent;
@@ -119,6 +112,14 @@ body {
               0 2px 20px -4px rgba(0, 0, 0, 0.08);
 }
 
+@media (prefers-color-scheme: dark) {
+  .nav-scrolled {
+    background-color: rgba(28, 28, 30, 0.72);
+    box-shadow: 0 0 0 0.5px rgba(255, 255, 255, 0.05),
+                0 2px 20px -4px rgba(0, 0, 0, 0.3);
+  }
+}
+
 /* ---------- Hero background mesh: iOS 18 Style ---------- */
 .hero-mesh {
   background:
@@ -127,56 +128,94 @@ body {
     linear-gradient(180deg, #F2F2F7 0%, #E5E5EA 100%);
 }
 
+@media (prefers-color-scheme: dark) {
+  .hero-mesh {
+    background:
+      radial-gradient(circle at 20% 30%, rgba(10, 132, 255, 0.12) 0%, transparent 40%),
+      radial-gradient(circle at 80% 70%, rgba(48, 209, 88, 0.08) 0%, transparent 45%),
+      linear-gradient(180deg, #000000 0%, #1C1C1E 100%);
+  }
+}
+
 /* ---------- Service card hover: iOS 18 Style ---------- */
 .service-card {
-  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-              box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-              background-color 0.3s ease,
-              border-color 0.3s ease;
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              box-shadow 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   will-change: transform;
   border-radius: 20px;
 }
 
+.service-icon-wrap {
+  background-color: rgba(0, 0, 0, 0.03);
+  border-radius: 16px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .service-icon-wrap {
+    background-color: rgba(255, 255, 255, 0.08);
+  }
+}
+
 .service-icon-wrap img {
   filter: brightness(0.32) contrast(1.05);
-  transition: filter 0.4s ease;
+  transition: filter 0.3s ease;
+}
+
+@media (prefers-color-scheme: dark) {
+  .service-icon-wrap img {
+    filter: brightness(0.8) contrast(1.05);
+  }
 }
 
 .service-card:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 20px 60px -15px rgba(0, 122, 255, 0.25),
-              0 8px 20px -8px rgba(0, 0, 0, 0.1);
-  background-color: #007AFF;
-  border-color: #007AFF;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px -8px rgba(0, 0, 0, 0.15),
+              0 4px 12px -4px rgba(0, 0, 0, 0.08);
+}
+
+@media (prefers-color-scheme: dark) {
+  .service-card:hover {
+    box-shadow: 0 12px 32px -8px rgba(0, 0, 0, 0.4),
+                0 4px 12px -4px rgba(0, 0, 0, 0.3);
+  }
 }
 
 .service-card:hover .service-icon-wrap {
-  background: rgba(255, 255, 255, 0.15);
+  background-color: rgba(0, 122, 255, 0.08);
+}
+
+@media (prefers-color-scheme: dark) {
+  .service-card:hover .service-icon-wrap {
+    background-color: rgba(10, 132, 255, 0.15);
+  }
 }
 
 .service-card:hover .service-icon-wrap img {
-  filter: brightness(1.1);
+  filter: brightness(0.32) contrast(1.05);
 }
 
-.service-card:hover h3,
-.service-card:hover p {
-  color: #ffffff !important;
-}
-
-.service-card:hover p {
-  color: rgba(255, 255, 255, 0.85) !important;
+@media (prefers-color-scheme: dark) {
+  .service-card:hover .service-icon-wrap img {
+    filter: brightness(0.8) contrast(1.05);
+  }
 }
 
 /* ---------- Team card hover: iOS 18 Style ---------- */
 .team-card {
-  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-              box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              box-shadow 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   border-radius: 20px;
 }
 
 .team-card:hover {
-  transform: translateY(-6px) scale(1.01);
-  box-shadow: 0 16px 48px -12px rgba(0, 0, 0, 0.12);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px -8px rgba(0, 0, 0, 0.12);
+}
+
+@media (prefers-color-scheme: dark) {
+  .team-card:hover {
+    box-shadow: 0 12px 32px -8px rgba(0, 0, 0, 0.4);
+  }
 }
 
 .team-card:hover .team-avatar {
@@ -184,7 +223,7 @@ body {
 }
 
 .team-avatar {
-  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 /* ---------- Nav link underline: iOS 18 Style ---------- */
@@ -202,7 +241,7 @@ body {
   left: 50%;
   width: 0;
   height: 2px;
-  background: #007AFF;
+  background: var(--color-primary);
   transition: width 0.3s ease, left 0.3s ease;
   border-radius: 1px;
 }
@@ -216,6 +255,13 @@ body {
 ::selection {
   background-color: rgba(0, 122, 255, 0.2);
   color: #1C1C1E;
+}
+
+@media (prefers-color-scheme: dark) {
+  ::selection {
+    background-color: rgba(10, 132, 255, 0.3);
+    color: #FFFFFF;
+  }
 }
 
 /* ---------- Scrollbar: iOS 18 Style ---------- */
@@ -236,4 +282,13 @@ body {
   background: rgba(0, 0, 0, 0.25);
   border: 2px solid transparent;
   background-clip: content-box;
+}
+
+@media (prefers-color-scheme: dark) {
+  ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.15);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.25);
+  }
 }
