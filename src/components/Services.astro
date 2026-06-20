@@ -1,0 +1,62 @@
+---
+// Service cards - keeps the self-deprecating copy from the original PHP site
+const services = [
+  {
+    title: '超快跑路速度',
+    desc: '从删库到跑路仅仅只需两分钟。我们以卓越删库跑路的能力被大家认可',
+    icon: '/images/services/icon-1.png',
+  },
+  {
+    title: '低于50%的SLA保证',
+    desc: '我们为您提供极低的SLA保证，降低您网站的在线率。做垃圾，我们是认真的',
+    icon: '/images/services/icon-2.png',
+  },
+  {
+    title: '数据随处可见',
+    desc: '我们的云服务存在各种漏洞BUG，使数据100%暴露。为您的隐私不负任何保障',
+    icon: '/images/services/icon-3.png',
+  },
+];
+---
+
+<section id="services" class="py-28 md:py-32 bg-[color:var(--color-bg)]">
+  <div class="max-w-6xl mx-auto px-6 lg:px-8">
+    <!-- Heading -->
+    <div class="text-center max-w-2xl mx-auto mb-20">
+      <span class="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-[color:var(--color-primary)] font-semibold">
+        <span class="w-1.5 h-1.5 rounded-full bg-[color:var(--color-primary)]"></span>
+        What We Offer
+      </span>
+      <h2 class="mt-5 font-[family-name:var(--font-display)] text-4xl md:text-5xl font-bold text-[color:var(--color-midnight)] tracking-tight">
+        服务
+      </h2>
+      <p class="mt-5 text-[color:var(--color-muted)] text-base md:text-lg leading-relaxed">
+        极具特色的服务内容，总有一款适合您
+      </p>
+    </div>
+
+    <!-- Cards Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {
+        services.map((service, i) => (
+          <div
+            class={`service-card bg-[color:var(--color-bg-card)] rounded-[20px] shadow-[0_2px_12px_-4px_rgba(0,0,0,0.08)] dark:shadow-[0_2px_12px_-4px_rgba(0,0,0,0.3)] p-10 text-center`}
+          >
+            <div class="service-icon-wrap mx-auto w-28 h-28 rounded-[16px] flex items-center justify-center mb-6 transition-all duration-500"
+                 style="background-image: url('/images/services/bg.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+              <div class="flex items-center justify-center w-full h-full p-4">
+                <img src={service.icon} alt="" class="max-w-full max-h-full object-contain" width="48" height="48" />
+              </div>
+            </div>
+            <h3 class="font-[family-name:var(--font-display)] text-xl font-semibold text-[color:var(--color-midnight)] mb-4 leading-snug transition-colors duration-300">
+              {service.title}
+            </h3>
+            <p class="text-sm text-[color:var(--color-muted)] leading-relaxed transition-colors duration-300">
+              {service.desc}
+            </p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,51 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { 
+  title = '唯蟹 Team — We Quest On and On',
+  description = 'We Quest On and On'
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.loli.net" />
+    <link rel="preconnect" href="https://gstatic.loli.net" crossorigin />
+    <link rel="stylesheet" href="https://fonts.loli.net/css2?family=Noto+Sans+SC:wght@400;500;600;700&display=swap" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="keywords" content="唯蟹Team, Xies' Group, Blog233, HoratioWeb, lujing, jack" />
+    <link rel="shortcut icon" href="/favicon.png" />
+    <meta name="generator" content={Astro.generator} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+  </head>
+  <body class="antialiased">
+    <slot />
+
+    <script is:inline>
+      // Sticky nav
+      const navbar = document.querySelector('[data-navbar]');
+      if (navbar) {
+        const onScroll = () => {
+          if (window.scrollY > 30) {
+            navbar.classList.add('nav-scrolled');
+          } else {
+            navbar.classList.remove('nav-scrolled');
+          }
+        };
+        onScroll();
+        window.addEventListener('scroll', onScroll, { passive: true });
+      }
+    </script>
+  </body>
+</html>
