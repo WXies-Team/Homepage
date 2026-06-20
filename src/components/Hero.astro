@@ -5,30 +5,41 @@
 <section id="home" class="hero-mesh relative overflow-hidden">
   <div class="min-h-screen flex items-center pt-28 pb-20 md:pt-36 md:pb-28">
     <div class="max-w-6xl mx-auto px-6 lg:px-8">
-      <div class="text-center max-w-3xl mx-auto">
-        <div>
-          <span class="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-[color:var(--color-primary)] font-semibold">
-            <span class="w-1.5 h-1.5 rounded-full bg-[color:var(--color-primary)]"></span>
-            We Quest On and On
-          </span>
+      <div class="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
+        <!-- Text -->
+        <div class="order-2 md:order-1">
+          <div>
+            <span class="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-[color:var(--color-primary)] font-semibold">
+              <span class="w-1.5 h-1.5 rounded-full bg-[color:var(--color-primary)]"></span>
+              We Quest On and On
+            </span>
+          </div>
+
+          <h1 class="mt-4 md:mt-6 font-[family-name:var(--font-display)] text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.05] tracking-tight text-[color:var(--color-midnight)]">
+            唯蟹 Team
+          </h1>
+
+          <p class="mt-6 md:mt-8 text-base md:text-lg lg:text-xl text-[color:var(--color-text)] leading-relaxed max-w-md">
+            一群热爱技术、专注于创造有趣数字世界的伙伴们，用代码书写属于我们自己的故事。
+          </p>
+
+          <div class="mt-8 md:mt-10 flex flex-wrap items-center gap-3 md:gap-4">
+            <a href="#about" class="inline-flex items-center gap-2 px-5 md:px-7 py-3 md:py-3.5 rounded-[14px] bg-[color:var(--color-primary)] text-white font-medium text-sm shadow-[0_4px_16px_-4px_rgba(0,122,255,0.4)] hover:shadow-[0_8px_24px_-6px_rgba(0,122,255,0.5)] hover:-translate-y-0.5 transition-all duration-300">
+              认识成员
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+            <a href="#services" class="inline-flex items-center gap-2 px-5 md:px-7 py-3 md:py-3.5 rounded-[14px] bg-white text-[color:var(--color-midnight)] font-medium text-sm border border-[color:var(--color-border)] hover:border-[color:var(--color-primary)] hover:text-[color:var(--color-primary)] transition-all duration-300">
+              查看服务
+            </a>
+          </div>
         </div>
 
-        <h1 class="mt-4 md:mt-6 font-[family-name:var(--font-display)] text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.05] tracking-tight text-[color:var(--color-midnight)]">
-          唯蟹 Team
-        </h1>
-
-        <p class="mt-6 md:mt-8 text-base md:text-lg lg:text-xl text-[color:var(--color-text)] leading-relaxed max-w-md mx-auto">
-          一群热爱技术、专注于创造有趣数字世界的伙伴们，用代码书写属于我们自己的故事。
-        </p>
-
-        <div class="mt-8 md:mt-10 flex flex-wrap items-center justify-center gap-3 md:gap-4">
-          <a href="#about" class="inline-flex items-center gap-2 px-6 md:px-8 py-3 md:py-3.5 rounded-full bg-[color:var(--color-primary)] text-white font-semibold text-sm shadow-[0_4px_14px_-4px_rgba(0,122,255,0.5)] hover:shadow-[0_6px_20px_-6px_rgba(0,122,255,0.6)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200">
-            认识成员
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-          </a>
-          <a href="#services" class="inline-flex items-center gap-2 px-6 md:px-8 py-3 md:py-3.5 rounded-full bg-[color:var(--color-bg-card)] text-[color:var(--color-midnight)] font-semibold text-sm shadow-[0_4px_14px_-4px_rgba(0,0,0,0.1)] dark:shadow-[0_4px_14px_-4px_rgba(0,0,0,0.4)] hover:shadow-[0_6px_20px_-6px_rgba(0,0,0,0.15)] dark:hover:shadow-[0_6px_20px_-6px_rgba(0,0,0,0.5)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200">
-            查看服务
-          </a>
+        <!-- Image -->
+        <div class="order-1 md:order-2 relative">
+          <div class="relative">
+            <img src="/images/hero-img.png" alt="唯蟹 Team" class="relative z-10 w-full max-w-xs md:max-w-md mx-auto block"
+                 style="animation: float 6s ease-in-out infinite;" />
+          </div>
         </div>
       </div>
     </div>

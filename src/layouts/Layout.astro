@@ -1,5 +1,15 @@
 ---
 import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { 
+  title = '唯蟹 Team — We Quest On and On',
+  description = 'We Quest On and On'
+} = Astro.props;
 ---
 
 <!doctype html>
@@ -10,13 +20,13 @@ import '../styles/global.css';
     <link rel="preconnect" href="https://fonts.loli.net" />
     <link rel="preconnect" href="https://gstatic.loli.net" crossorigin />
     <link rel="stylesheet" href="https://fonts.loli.net/css2?family=Noto+Sans+SC:wght@400;500;600;700&display=swap" />
-    <title>唯蟹 Team — We Quest On and On</title>
-    <meta name="description" content="We Quest On and On" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
     <meta name="keywords" content="唯蟹Team, Xies' Group, Blog233, HoratioWeb, lujing, jack" />
     <link rel="shortcut icon" href="/images/favicons/favicon.png" />
     <meta name="generator" content={Astro.generator} />
-    <meta property="og:title" content="唯蟹 Team — We Quest On and On" />
-    <meta property="og:description" content="We Quest On and On" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
   </head>
   <body class="antialiased">
