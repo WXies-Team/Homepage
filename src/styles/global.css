@@ -146,14 +146,7 @@ body {
 }
 
 .service-icon-wrap {
-  background-color: rgba(0, 0, 0, 0.03);
   border-radius: 16px;
-}
-
-@media (prefers-color-scheme: dark) {
-  .service-icon-wrap {
-    background-color: rgba(255, 255, 255, 0.08);
-  }
 }
 
 .service-icon-wrap img {
@@ -177,16 +170,6 @@ body {
   .service-card:hover {
     box-shadow: 0 12px 32px -8px rgba(0, 0, 0, 0.4),
                 0 4px 12px -4px rgba(0, 0, 0, 0.3);
-  }
-}
-
-.service-card:hover .service-icon-wrap {
-  background-color: rgba(0, 122, 255, 0.08);
-}
-
-@media (prefers-color-scheme: dark) {
-  .service-card:hover .service-icon-wrap {
-    background-color: rgba(10, 132, 255, 0.15);
   }
 }
 
