@@ -4,7 +4,7 @@ const pathname = Astro.url.pathname;
 const isHome = pathname === '/';
 
 const navLinks = [
-  { href: isHome ? '#home' : '/#home', label: '主页' },
+  { href: isHome ? '#' : '/', label: '主页' },
   { href: isHome ? '#about' : '/#about', label: '成员' },
   { href: isHome ? '#services' : '/#services', label: '服务' },
 ];
@@ -13,7 +13,7 @@ const navLinks = [
 <nav class="w-full">
   <div class="max-w-6xl mx-auto px-6 lg:px-8">
     <div class="flex items-center justify-between h-[72px]">
-      <a href={isHome ? '#home' : '/'} class="flex items-center gap-3 group">
+      <a href={isHome ? '#' : '/'} class="flex items-center gap-3 group">
         <img src="/favicon.png" alt="唯蟹 Team" class="h-10 w-10 rounded-xl shadow-sm group-hover:scale-105 transition-transform duration-300" width="40" height="40" />
         <span class="font-[family-name:var(--font-display)] text-lg font-semibold text-[color:var(--color-midnight)] tracking-tight hidden sm:block">唯蟹 Team</span>
       </a>
@@ -56,4 +56,12 @@ const navLinks = [
       });
     });
   }
+
+  // Handle home link click - scroll to top
+  document.querySelectorAll('a[href="#"]').forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
 </script>
