@@ -1,5 +1,5 @@
 ---
-// Sticky navbar with glassmorphism effect
+// Navbar
 const pathname = Astro.url.pathname;
 const isHome = pathname === '/';
 
@@ -10,8 +10,8 @@ const navLinks = [
 ];
 ---
 
-<nav data-navbar class="fixed top-4 left-1/2 -translate-x-1/2 w-full max-w-6xl z-50 transition-all duration-300 rounded-[24px] backdrop-blur-[20px]">
-  <div class="px-6 lg:px-8">
+<nav class="w-full">
+  <div class="max-w-6xl mx-auto px-6 lg:px-8">
     <div class="flex items-center justify-between h-[72px]">
       <a href={isHome ? '#home' : '/'} class="flex items-center gap-3 group">
         <img src="/favicon.png" alt="唯蟹 Team" class="h-10 w-10 rounded-xl shadow-sm group-hover:scale-105 transition-transform duration-300" width="40" height="40" />
