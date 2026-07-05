@@ -69,6 +69,7 @@ deploy() {
     new_hash=$(md5sum "$0" | awk '{print $1}')
     if [[ "${new_hash}" != "${SCRIPT_HASH}" ]]; then
         echo ">>> 脚本已更新，重启中..."
+        rm -f "${LOCK_FILE}"
         exec "$0"
     fi
     
