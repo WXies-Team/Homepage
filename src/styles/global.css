@@ -101,21 +101,18 @@ body {
     linear-gradient(180deg, #F2F2F7 0%, #E5E5EA 100%);
 }
 
-@media (prefers-color-scheme: dark) {
-  .hero-mesh {
-    background:
-      radial-gradient(circle at 20% 30%, rgba(10, 132, 255, 0.12) 0%, transparent 40%),
-      radial-gradient(circle at 80% 70%, rgba(48, 209, 88, 0.08) 0%, transparent 45%),
-      linear-gradient(180deg, #000000 0%, #1C1C1E 100%);
-  }
-}
-
-/* ---------- Service card hover: iOS 18 Style ---------- */
+/* ---------- Service card: iOS 18 Style ---------- */
 .service-card {
   transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
               box-shadow 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   will-change: transform;
   border-radius: 20px;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px -8px rgba(0, 0, 0, 0.15),
+              0 4px 12px -4px rgba(0, 0, 0, 0.08);
 }
 
 .service-icon-wrap {
@@ -127,36 +124,11 @@ body {
   transition: filter 0.3s ease;
 }
 
-@media (prefers-color-scheme: dark) {
-  .service-icon-wrap img {
-    filter: brightness(0.8) contrast(1.05);
-  }
-}
-
-.service-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 32px -8px rgba(0, 0, 0, 0.15),
-              0 4px 12px -4px rgba(0, 0, 0, 0.08);
-}
-
-@media (prefers-color-scheme: dark) {
-  .service-card:hover {
-    box-shadow: 0 12px 32px -8px rgba(0, 0, 0, 0.4),
-                0 4px 12px -4px rgba(0, 0, 0, 0.3);
-  }
-}
-
 .service-card:hover .service-icon-wrap img {
   filter: brightness(0.32) contrast(1.05);
 }
 
-@media (prefers-color-scheme: dark) {
-  .service-card:hover .service-icon-wrap img {
-    filter: brightness(0.8) contrast(1.05);
-  }
-}
-
-/* ---------- Team card hover: iOS 18 Style ---------- */
+/* ---------- Team card: iOS 18 Style ---------- */
 .team-card {
   transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
               box-shadow 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -168,18 +140,12 @@ body {
   box-shadow: 0 12px 32px -8px rgba(0, 0, 0, 0.12);
 }
 
-@media (prefers-color-scheme: dark) {
-  .team-card:hover {
-    box-shadow: 0 12px 32px -8px rgba(0, 0, 0, 0.4);
-  }
+.team-avatar {
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .team-card:hover .team-avatar {
   transform: scale(1.05);
-}
-
-.team-avatar {
-  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 /* ---------- Nav link underline: iOS 18 Style ---------- */
@@ -213,13 +179,6 @@ body {
   color: #1C1C1E;
 }
 
-@media (prefers-color-scheme: dark) {
-  ::selection {
-    background-color: rgba(10, 132, 255, 0.3);
-    color: #FFFFFF;
-  }
-}
-
 /* ---------- Scrollbar: iOS 18 Style ---------- */
 ::-webkit-scrollbar {
   width: 8px;
@@ -240,7 +199,37 @@ body {
   background-clip: content-box;
 }
 
+/* ---------- Dark Mode Overrides ---------- */
 @media (prefers-color-scheme: dark) {
+  .hero-mesh {
+    background:
+      radial-gradient(circle at 20% 30%, rgba(10, 132, 255, 0.12) 0%, transparent 40%),
+      radial-gradient(circle at 80% 70%, rgba(48, 209, 88, 0.08) 0%, transparent 45%),
+      linear-gradient(180deg, #000000 0%, #1C1C1E 100%);
+  }
+
+  .service-card:hover {
+    box-shadow: 0 12px 32px -8px rgba(0, 0, 0, 0.4),
+                0 4px 12px -4px rgba(0, 0, 0, 0.3);
+  }
+
+  .service-icon-wrap img {
+    filter: brightness(0.8) contrast(1.05);
+  }
+
+  .service-card:hover .service-icon-wrap img {
+    filter: brightness(0.8) contrast(1.05);
+  }
+
+  .team-card:hover {
+    box-shadow: 0 12px 32px -8px rgba(0, 0, 0, 0.4);
+  }
+
+  ::selection {
+    background-color: rgba(10, 132, 255, 0.3);
+    color: #FFFFFF;
+  }
+
   ::-webkit-scrollbar-thumb {
     background: rgba(255, 255, 255, 0.15);
   }

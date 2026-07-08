@@ -1,15 +1,18 @@
 ---
 import '../styles/global.css';
+import { ClientRouter } from 'astro:transitions';
 
 interface Props {
   title?: string;
   description?: string;
 }
 
-const { 
+const {
   title = '唯蟹 Team — We Quest On and On',
   description = 'We Quest On and On'
 } = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? 'https://www.wxies.cn');
 ---
 
 <!doctype html>
@@ -24,10 +27,39 @@ const {
     <meta name="description" content={description} />
     <meta name="keywords" content="唯蟹Team, Xies' Group, Blog233, HoratioWeb, lujing, jack" />
     <link rel="shortcut icon" href="/favicon.png" />
+    <link rel="canonical" href={canonicalURL} />
     <meta name="generator" content={Astro.generator} />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph -->
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:image" content="/favicon.png" />
+    <meta property="og:locale" content="zh_CN" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="/favicon.png" />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json" is:inline set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "唯蟹 Team",
+      "url": "https://www.wxies.cn",
+      "logo": "https://www.wxies.cn/favicon.png",
+      "description": "一群热爱技术、专注于创造有趣数字世界的伙伴们",
+      "member": [
+        { "@type": "Person", "name": "Horatio", "url": "https://horatio.cn/" },
+        { "@type": "Person", "name": "Jack", "url": "https://blog.wj0.top/" }
+      ]
+    })} />
+
+    <ClientRouter />
   </head>
   <body class="antialiased">
     <slot />
