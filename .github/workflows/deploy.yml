@@ -25,16 +25,24 @@ jobs:
     steps:
       - uses: actions/checkout@v7
 
-      # 构建指令沿用原 deploy.sh
+      # 构建指令沿用原 deploy.sh（Astro 产物默认输出到 dist/）
       - name: Install dependencies
         run: npm install
 
       - name: Build
         run: npm run build
 
-      # 直接覆盖：--delete 使服务器目录与「仓库 + 构建产物」逐字一致
-      # .git / node_modules 不上传也不删；.user.ini / .well-known 为 aaPanel 面板托管
-      # （.user.ini 可能被 chattr 锁定，删它会以 rsync code 23 失败），同样保留
+      - name: Verify build output
+        run: |
+          if [ ! -f dist/index.html ]; then
+            echo "::error::dist/index.html 不存在，构建产物路径异常（检查 astro outDir）"
+            exit 1
+          fi
+
+      # 构建产物直接铺到站点根目录（不带 dist/ 子目录）
+      # 直接覆盖：--delete 使站点根与产物逐字一致，旧的源码/.git 残留一并清掉
+      # .user.ini / .well-known 为 aaPanel 面板托管（.user.ini 可能被 chattr 锁定，
+      # 删它会以 rsync code 23 失败），排除保留
       - name: Deploy
         env:
           SSH_KEY: ${{ secrets.SERVER_SSH_KEY }}
@@ -49,7 +57,7 @@ jobs:
           chmod 600 "$KEY"
           trap 'rm -f "$KEY"' EXIT
           SSH_OPTS=(-i "$KEY" -o StrictHostKeyChecking=accept-new -o UserKnownHostsFile="$KNOWN" -o BatchMode=yes)
-          ssh "${SSH_OPTS[@]}" "$USER@$HOST" "mkdir -p '$DIR'"
-          rsync -a --delete --exclude='.git' --exclude='node_modules' --exclude='.user.ini' --exclude='.well-known' \
+          ssh "${SSH_OPTS[@]}" "$USER@$HOST" "mkdir -p '$DIR' && rm -rf '$DIR/.git' '$DIR/.github' '$DIR/.gitignore' '$DIR/.gitattributes' '$DIR/HANDOFF.md'"
+          rsync -a --delete --exclude='.user.ini' --exclude='.well-known' \
             -e "ssh ${SSH_OPTS[*]}" \
-            "$GITHUB_WORKSPACE/" "$USER@$HOST:$DIR/"
+            "$GITHUB_WORKSPACE/dist/" "$USER@$HOST:$DIR/"
