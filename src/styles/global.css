@@ -1,26 +1,62 @@
 @import "tailwindcss";
 
 /*
- * Fonts are loaded via <link> in Layout.astro head.
- * This avoids CSS @import ordering issues and improves first paint.
+ * Noto Sans SC 自托管在 static.horatio.cn，直接用 @font-face 引入：
+ * 不再依赖第三方字体样式表，避免它阻塞首屏渲染（原 fonts.loli.net 的
+ * link[rel=stylesheet] 是渲染阻塞资源，实测拖慢首屏约 2s）。
+ * font-display: swap + 系统字体兜底，字体没到之前先用系统字体出字。
  */
+@font-face {
+  font-family: "Noto Sans SC";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("https://static.horatio.cn/resource/fonts/noto-sans-sc-chinese-simplified-400-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Noto Sans SC";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("https://static.horatio.cn/resource/fonts/noto-sans-sc-chinese-simplified-500-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Noto Sans SC";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("https://static.horatio.cn/resource/fonts/noto-sans-sc-chinese-simplified-600-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Noto Sans SC";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("https://static.horatio.cn/resource/fonts/noto-sans-sc-chinese-simplified-700-normal.woff2") format("woff2");
+}
 
 @theme {
-  /* ---------- Colors: iOS 18 Light Mode ---------- */
-  --color-primary: #007AFF;
-  --color-primary-soft: rgba(0, 122, 255, 0.08);
-  --color-primary-soft-hover: rgba(0, 122, 255, 0.14);
+  /* ---------- Colors: iOS 18 Light Mode ----------
+   * 对比度按 HIG accessibility 的 WCAG AA（≤17pt 需 4.5:1）取值：
+   * primary 对白底 5.86:1、对 hero 渐变最深处 #E5E5EA 5.01:1；
+   * muted 对白底 5.07:1、对 #F2F2F7 4.54:1（原 #8E8E93 仅 3.26:1，不达标）。 */
+  --color-primary: #0062C8;
+  /* 白字按钮底：浅色下与 primary 同值，暗色下需另取（见 @media dark） */
+  --color-primary-strong: #0062C8;
+  --color-primary-soft: rgba(0, 98, 200, 0.08);
+  --color-primary-soft-hover: rgba(0, 98, 200, 0.14);
   --color-midnight: #1C1C1E;
   --color-accent: #34C759;
   --color-text: #3C3C43;
-  --color-muted: #8E8E93;
+  --color-muted: #6E6E73;
   --color-bg: #F2F2F7;
   --color-bg-card: #FFFFFF;
   --color-border: rgba(0, 0, 0, 0.08);
 
   /* ---------- Typography ---------- */
-  --font-display: "Noto Sans SC", "Noto Sans", sans-serif;
-  --font-body: "Noto Sans SC", "Noto Sans", sans-serif;
+  /* 中文兜底链：字体没加载完（或字形缺失）时先用系统字体出字，不等网络 */
+  --font-display: "Noto Sans SC", -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans", sans-serif;
+  --font-body: "Noto Sans SC", -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans", sans-serif;
 
   /* ---------- Animations: iOS Spring-like ---------- */
   --animate-float: float 6s ease-in-out infinite;
@@ -31,7 +67,10 @@
 /* ---------- Dark Mode: iOS 18 ---------- */
 @media (prefers-color-scheme: dark) {
   :root {
+    /* 暗色下 primary 当文字用（对 #000 5.76:1、对 #1C1C1E 4.66:1）；
+       白字按钮底另用 strong：#0A84FF 白字仅 3.65:1，#0A72E0 为 4.67:1。 */
     --color-primary: #0A84FF;
+    --color-primary-strong: #0A72E0;
     --color-primary-soft: rgba(10, 132, 255, 0.12);
     --color-primary-soft-hover: rgba(10, 132, 255, 0.2);
     --color-midnight: #FFFFFF;
@@ -79,6 +118,49 @@
   0% { background-position: -1000px 0; }
   100% { background-position: 1000px 0; }
 }
+
+/* ---------- Mobile menu: 展开瞬间入场（收起仍是 display:none 瞬切，
+ * 这样关闭后键盘焦点不会留在隐藏链接里） ---------- */
+@keyframes menu-in {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+#mobile-menu:not(.hidden) {
+  animation: menu-in 0.25s ease-out;
+}
+
+/* ---------- Hero entrance: 纯 CSS，不等 JS，首屏可最快上屏 ---------- */
+@media (prefers-reduced-motion: no-preference) {
+  .hero-enter {
+    animation: fade-up 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+  .hero-enter-1 { animation-delay: 0.08s; }
+  .hero-enter-2 { animation-delay: 0.16s; }
+  .hero-enter-3 { animation-delay: 0.24s; }
+}
+
+/* ---------- Scroll reveal ----------
+ * 只有 JS 加上 .js 后才隐藏待入场元素，脚本没跑（或被禁用）时内容直接可见。 */
+.js [data-reveal] {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.js [data-reveal].is-visible {
+  opacity: 1;
+  transform: none;
+}
+.js [data-reveal][data-delay="1"] { transition-delay: 80ms; }
+.js [data-reveal][data-delay="2"] { transition-delay: 160ms; }
+.js [data-reveal][data-delay="3"] { transition-delay: 240ms; }
 
 /* ---------- Base ---------- */
 html {
@@ -197,6 +279,38 @@ body {
   background: rgba(0, 0, 0, 0.25);
   border: 2px solid transparent;
   background-clip: content-box;
+}
+
+/* ---------- Focus: 键盘可见焦点 ---------- */
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* ---------- Touch: 触屏没有 hover，按下给按压反馈 ---------- */
+@media (hover: none) {
+  .service-card:active,
+  .team-card:active {
+    transform: translateY(-2px) scale(0.99);
+  }
+}
+
+/* ---------- Reduced Motion: HIG motion / WCAG C39 ----------
+ * 关掉非必要位移与平滑滚动，只保留瞬时状态切换。 */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    animation-delay: 0ms !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 /* ---------- Dark Mode Overrides ---------- */

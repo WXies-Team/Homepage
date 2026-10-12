@@ -20,13 +20,15 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? 'https://www.wxie
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.loli.net" />
-    <link rel="preconnect" href="https://gstatic.loli.net" crossorigin />
-    <link rel="stylesheet" href="https://fonts.loli.net/css2?family=Noto+Sans+SC:wght@400;500;600;700&display=swap" />
+    <script is:inline>
+      // 先于首帧渲染打标：滚动入场动画的初始隐藏态只在 JS 可用时生效
+      document.documentElement.classList.add('js');
+    </script>
+    <link rel="preconnect" href="https://static.horatio.cn" crossorigin />
     <title>{title}</title>
     <meta name="description" content={description} />
     <meta name="keywords" content="唯蟹Team, Xies' Group, Blog233, HoratioWeb, lujing, jack" />
-    <link rel="shortcut icon" href="/favicon.png" />
+    <link rel="shortcut icon" href="/favicon-64.png" />
     <link rel="canonical" href={canonicalURL} />
     <meta name="generator" content={Astro.generator} />
     <meta name="robots" content="index, follow" />
@@ -65,19 +67,32 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? 'https://www.wxie
     <slot />
 
     <script is:inline>
-      // Sticky nav
-      const navbar = document.querySelector('[data-navbar]');
-      if (navbar) {
-        const onScroll = () => {
-          if (window.scrollY > 30) {
-            navbar.classList.add('nav-scrolled');
-          } else {
-            navbar.classList.remove('nav-scrolled');
+      // ClientRouter 换页会重新执行本脚本：用 IIFE + 标记避免重复声明与重复注册
+      (() => {
+        if (window.__revealHooked) return;
+        window.__revealHooked = true;
+        const initReveal = () => {
+          const els = document.querySelectorAll('[data-reveal]');
+          const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+          if (reduce || !('IntersectionObserver' in window)) {
+            els.forEach((el) => el.classList.add('is-visible'));
+            return;
           }
+          const io = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add('is-visible');
+                  io.unobserve(entry.target);
+                }
+              });
+            },
+            { threshold: 0.1, rootMargin: '0px 0px -8% 0px' }
+          );
+          els.forEach((el) => io.observe(el));
         };
-        onScroll();
-        window.addEventListener('scroll', onScroll, { passive: true });
-      }
+        document.addEventListener('astro:page-load', initReveal);
+      })();
     </script>
   </body>
 </html>

@@ -14,7 +14,7 @@ const navLinks = [
   <div class="max-w-6xl mx-auto px-6 lg:px-8">
     <div class="flex items-center justify-between h-[72px]">
       <a href={isHome ? '#' : '/'} class="flex items-center gap-3 group">
-        <img src="/favicon.png" alt="唯蟹 Team" class="h-10 w-10 rounded-xl shadow-sm group-hover:scale-105 transition-transform duration-300" width="40" height="40" />
+        <img src="/images/logo-160.webp" alt="唯蟹 Team" class="h-10 w-10 rounded-xl shadow-sm group-hover:scale-105 transition-transform duration-300" width="40" height="40" decoding="async" />
         <span class="font-[family-name:var(--font-display)] text-lg font-semibold text-[color:var(--color-midnight)] tracking-tight hidden sm:block">唯蟹 Team</span>
       </a>
 
@@ -24,7 +24,7 @@ const navLinks = [
         ))}
       </ul>
 
-      <button id="mobile-toggle" class="md:hidden p-2 -mr-2 rounded-lg hover:bg-[color:var(--color-primary-soft)] transition-colors duration-200" aria-label="切换菜单">
+      <button id="mobile-toggle" class="md:hidden p-3 -mr-3 rounded-lg hover:bg-[color:var(--color-primary-soft)] transition-colors duration-200" aria-label="切换菜单" aria-controls="mobile-menu" aria-expanded="false">
         <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-[color:var(--color-midnight)]">
           <line x1="3" y1="6" x2="21" y2="6"></line>
           <line x1="3" y1="12" x2="21" y2="12"></line>
@@ -33,7 +33,7 @@ const navLinks = [
       </button>
     </div>
 
-    <div id="mobile-menu" class="md:hidden hidden overflow-hidden transition-all duration-300">
+    <div id="mobile-menu" class="md:hidden hidden overflow-hidden">
       <ul class="pb-4 pt-2 flex flex-col gap-1 text-base font-medium">
         {navLinks.map(({ href, label }) => (
           <li><a href={href} class="block py-3 px-2 rounded-lg hover:bg-[color:var(--color-primary-soft)] hover:text-[color:var(--color-primary)] transition-colors">{label}</a></li>
@@ -48,11 +48,13 @@ const navLinks = [
   const menu = document.getElementById('mobile-menu');
   if (toggle && menu) {
     toggle.addEventListener('click', () => {
-      menu.classList.toggle('hidden');
+      const open = menu.classList.toggle('hidden');
+      toggle.setAttribute('aria-expanded', String(!open));
     });
     menu.querySelectorAll('a').forEach((link) => {
       link.addEventListener('click', () => {
         menu.classList.add('hidden');
+        toggle.setAttribute('aria-expanded', 'false');
       });
     });
   }
@@ -61,7 +63,10 @@ const navLinks = [
   document.querySelectorAll('a[href="#"]').forEach(link => {
     link.addEventListener('click', (e) => {
       e.preventDefault();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.scrollTo({
+        top: 0,
+        behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
+      });
     });
   });
 </script>
