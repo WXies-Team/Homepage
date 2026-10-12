@@ -41,7 +41,7 @@ jobs:
 
       # 构建产物直接铺到站点根目录（不带 dist/ 子目录）
       # 直接覆盖：--delete 使站点根与产物逐字一致，旧的源码/.git 残留一并清掉
-      # .user.ini / .well-known 为 aaPanel 面板托管（.user.ini 可能被 chattr 锁定，
+      # .user.ini / .htaccess / .well-known 为面板与服务端托管（.user.ini 可能被 chattr 锁定，
       # 删它会以 rsync code 23 失败），排除保留
       - name: Deploy
         env:
@@ -58,6 +58,6 @@ jobs:
           trap 'rm -f "$KEY"' EXIT
           SSH_OPTS=(-i "$KEY" -o StrictHostKeyChecking=accept-new -o UserKnownHostsFile="$KNOWN" -o BatchMode=yes)
           ssh "${SSH_OPTS[@]}" "$USER@$HOST" "mkdir -p '$DIR' && rm -rf '$DIR/.git' '$DIR/.github' '$DIR/.gitignore' '$DIR/.gitattributes' '$DIR/HANDOFF.md'"
-          rsync -a --delete --exclude='.user.ini' --exclude='.well-known' \
+          rsync -a --delete --exclude='.user.ini' --exclude='.well-known' --exclude='.htaccess' \
             -e "ssh ${SSH_OPTS[*]}" \
             "$GITHUB_WORKSPACE/dist/" "$USER@$HOST:$DIR/"
