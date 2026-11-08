@@ -40,11 +40,11 @@
    * 对比度按 HIG accessibility 的 WCAG AA（≤17pt 需 4.5:1）取值：
    * primary 对白底 5.86:1、对 hero 渐变最深处 #E5E5EA 5.01:1；
    * muted 对白底 5.07:1、对 #F2F2F7 4.54:1（原 #8E8E93 仅 3.26:1，不达标）。 */
-  --color-primary: #0062C8;
+  --color-primary: #3482FF;
   /* 白字按钮底：浅色下与 primary 同值，暗色下需另取（见 @media dark） */
-  --color-primary-strong: #0062C8;
-  --color-primary-soft: rgba(0, 98, 200, 0.08);
-  --color-primary-soft-hover: rgba(0, 98, 200, 0.14);
+  --color-primary-strong: #2563EB;
+  --color-primary-soft: rgba(52, 130, 255, 0.08);
+  --color-primary-soft-hover: rgba(52, 130, 255, 0.14);
   --color-midnight: #1C1C1E;
   --color-accent: #34C759;
   --color-text: #3C3C43;
@@ -69,10 +69,10 @@
   :root {
     /* 暗色下 primary 当文字用（对 #000 5.76:1、对 #1C1C1E 4.66:1）；
        白字按钮底另用 strong：#0A84FF 白字仅 3.65:1，#0A72E0 为 4.67:1。 */
-    --color-primary: #0A84FF;
-    --color-primary-strong: #0A72E0;
-    --color-primary-soft: rgba(10, 132, 255, 0.12);
-    --color-primary-soft-hover: rgba(10, 132, 255, 0.2);
+    --color-primary: #5C93FF;
+    --color-primary-strong: #3482FF;
+    --color-primary-soft: rgba(92, 147, 255, 0.12);
+    --color-primary-soft-hover: rgba(92, 147, 255, 0.2);
     --color-midnight: #FFFFFF;
     --color-accent: #30D158;
     --color-text: #EBEBF5;
