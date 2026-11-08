@@ -22,8 +22,9 @@ concurrency:
 jobs:
   deploy:
     runs-on: self-hosted
+    timeout-minutes: 20
     steps:
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7
 
       # 构建指令沿用原 deploy.sh（Astro 产物默认输出到 dist/）
       - name: Install dependencies
@@ -40,9 +41,8 @@ jobs:
           fi
 
       # 构建产物直接铺到站点根目录（不带 dist/ 子目录）
-      # 直接覆盖：--delete 使站点根与产物逐字一致，旧的源码/.git 残留一并清掉
-      # .user.ini / .htaccess / .well-known 为面板与服务端托管（.user.ini 可能被 chattr 锁定，
-      # 删它会以 rsync code 23 失败），排除保留
+      # 只同步清单内文件：清单里的新增/修改才上传，构建产物删掉的文件才从服务器删除；
+      # 服务器原有数据不在清单里，永不触碰；.user.ini / .well-known 为 aaPanel 托管，排除保留
       - name: Deploy
         env:
           SSH_KEY: ${{ secrets.SERVER_SSH_KEY }}
@@ -50,7 +50,7 @@ jobs:
           USER: ${{ secrets.SERVER_USER }}
           DIR: ${{ secrets.SERVER_HOMEPAGE_DIR }}
         run: |
-          set -euo pipefail
+          set -Eeuo pipefail
           KEY="$RUNNER_TEMP/deploy_key"
           KNOWN="$RUNNER_TEMP/known_hosts"
           printf '%s\n' "$SSH_KEY" > "$KEY"
@@ -58,6 +58,5 @@ jobs:
           trap 'rm -f "$KEY"' EXIT
           SSH_OPTS=(-i "$KEY" -o StrictHostKeyChecking=accept-new -o UserKnownHostsFile="$KNOWN" -o BatchMode=yes)
           ssh "${SSH_OPTS[@]}" "$USER@$HOST" "mkdir -p '$DIR' && rm -rf '$DIR/.git' '$DIR/.github' '$DIR/.gitignore' '$DIR/.gitattributes' '$DIR/HANDOFF.md'"
-          rsync -a --delete --exclude='.user.ini' --exclude='.well-known' --exclude='.htaccess' \
-            -e "ssh ${SSH_OPTS[*]}" \
-            "$GITHUB_WORKSPACE/dist/" "$USER@$HOST:$DIR/"
+          DEPLOY_HOST="$USER@$HOST" DEPLOY_DEST="$DIR" DEPLOY_SSH_KEY="$KEY" \
+            bash ci/deploy-managed.sh dist ci/deploy-exclude.txt
