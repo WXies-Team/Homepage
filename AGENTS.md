@@ -1,45 +1,39 @@
-# AGENTS.md
+# AGENTS.md — Homepage
 
-WXies Team org homepage (www.wxies.cn): a static marketing page on **Astro 7 + Tailwind 4** — no CMS, no data layer, no API calls. The deployed site root is the built `dist/`; push to `main` builds and rsyncs it live via Actions.
+WXies Team org homepage at `www.wxies.cn` — static Astro 7 + Tailwind 4 site (no CMS/API); pushing `main` builds and rsyncs `dist/` to the live site root, while `*.md`/`.github/**`-only pushes deploy nothing (use workflow_dispatch).
+
+## Precedence
+
+Nearest `AGENTS.md` wins over the global file; an explicit user instruction wins over both. When docs and code disagree, follow the existing code and report the inconsistency. Global rules live in `~/.config/opencode/AGENTS.md` (do not restate them here).
 
 ## Commands
 
-```bash
-npm install          # Node >= 22.12 (engines field)
-npm run dev          # local dev server
-npm run build        # astro build → dist/ (gitignored, never committed)
-npm run preview      # preview the built dist/ locally
-```
+| Purpose | Command (from CI/package.json) |
+| --- | --- |
+| Install dependencies | `npm install` (Node ≥ 22.12, per `engines`) |
+| Local dev | `npm run dev` |
+| Preview built site | `npm run preview` |
+| Build / verification | `npm run build` → `dist/`; CI check = `dist/index.html` exists |
+| Single test / lint | none — `npm run build` is the only gate |
 
-There is **no lint / test**; verification = build exits 0 and `dist/index.html` exists (same check CI runs). CI is the real gate.
-
-Deploy: push `main` → `.github/workflows/deploy.yml` builds and rsyncs `dist/` **flattened to the site root**; changes to `*.md` or `.github/**` **do not trigger** a deploy — use workflow_dispatch.
-
-## Conventions
-
-- Structure: routes in `src/pages/`, the shared shell (head, meta, global styles) in `src/layouts/Layout.astro`, page sections as components in `src/components/` (Hero / About / Services / Navbar / Footer / BackToTop).
-- Images: bundled assets (imports, hashed) in `src/assets/`; static files copied as-is in `public/` (favicon, `images/`).
-- The canonical site URL is set once in `astro.config.mjs` (`site: 'https://www.wxies.cn'`) — absolute URLs derive from it.
-- Commit format follows the org convention: conventional commits with a Chinese description.
+Required before finishing: `npm run build` exits 0 and `dist/index.html` exists. CI installs with `npm install` (not `npm ci`); on a dependency error, run `npm install` before judging the build.
 
 ## Boundaries
 
 **Always**
-- Run `npm run build` and confirm exit 0 before pushing anything that touches `src/` or config.
-- New pages → add `src/pages/<name>.astro` and wire the link from existing components (Navbar/Footer); check both desktop and mobile layout.
+- Run `npm run build` before pushing anything under `src/` or config; a new page goes in `src/pages/<name>.astro` and must be linked from Navbar/Footer.
+- Check desktop and mobile layout for any layout or component change.
 
 **Ask first**
-- Adding dependencies (the dep set is intentionally minimal: astro + tailwind).
-- Changing `astro.config.mjs` (site URL, output mode, outDir).
-- Restyling conventions (fonts, color system in `src/styles/global.css`).
+- Adding dependencies (the set is intentionally minimal: astro + tailwind), changing `astro.config.mjs` (site URL/output), or restyling the font/color system in `src/styles/global.css`.
+- Editing `.github/workflows/deploy.yml` or changing the build output directory (the workflow rsyncs `dist/` from a fixed path).
 
 **Never**
-- Commit `dist/` or `node_modules/`.
-- Change the build output directory — the workflow rsyncs `dist/` from a fixed path.
-- Touch server-side panel files (`.user.ini`, `.htaccess`, `.well-known`) — they are rsync-excluded and stay on the server.
+- Commit `dist/`, `.astro/` or `node_modules/` (all gitignored); write extra files into the site root at build time — deploy rsyncs `--delete` and removes anything the build doesn't produce.
+- Touch panel-managed files (`.user.ini`, `.htaccess`, `.well-known/`) — they are rsync-excluded and stay on the server.
 
-## Known pitfalls
+## Pointers
 
-- The deploy **flattens `dist/` onto the site root with `rsync --delete`**: anything on the server that the build doesn't produce is deleted (panel-managed files are excluded). Don't add steps that write extra files into the site root.
-- Only `dist/` is synced, so repo-only files (`.git*`, `AGENTS.md`, docs) never reach production — keep it that way when editing the workflow.
-- `*.md`-only pushes deploy nothing (paths-ignore) — doc tweaks need workflow_dispatch if they must go live.
+- Canonical site URL: `astro.config.mjs` (`site`); deploy semantics and exclusions: `ci/deploy-managed.sh`, `ci/deploy-exclude.txt`.
+- Static assets copied as-is live in `public/`; bundled/hashed assets live in `src/assets/`.
+- Commit format: `~/.config/opencode/docs/COMMITTING.md`.
