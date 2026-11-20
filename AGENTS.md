@@ -22,7 +22,7 @@ Before finishing: `npm run build` exits 0 and `dist/index.html` exists. CI insta
 | Deploy semantics and exclusions | `ci/deploy-managed.sh`, `ci/deploy-exclude.txt` |
 | Static assets | `public/` (copied as-is); `src/assets/` (bundled/hashed) |
 | Layout/components | `src/layouts/Layout.astro`, `src/components/`, `src/styles/global.css` |
-| Commit format | `~/.config/opencode/docs/COMMITTING.md` |
+| Commit format | `~/.config/opencode/docs/committing.md` |
 | Global rules | `~/.config/opencode/AGENTS.md` |
 
 ## Boundaries
